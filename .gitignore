@@ -1,0 +1,33 @@
+# Local OS/editor artifacts
+.DS_Store
+**/.DS_Store
+*.swp
+*.tmp
+
+# Dependencies and caches
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local secrets and browser authentication artifacts
+.env
+.env.*
+!.env.example
+!.env.sample
+**/.auth/
+**/.playwright-cli/
+**/output/playwright/
+**/browser-profile/
+**/browser-profiles/
+**/cookies.json
+**/cookies-*.json
+**/storage-state*.json
+**/storage_state*.json
+**/credentials.json
+**/credentials-*.json
+*.pem
+*.key
+
+# Keep the extracted data once; do not commit the transport archive.
+anhtester-course-export.zip

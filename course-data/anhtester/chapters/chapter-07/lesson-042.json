@@ -1,0 +1,23 @@
+{
+  "order": 42,
+  "source_id": "398",
+  "chapter_order": 7,
+  "chapter_title": "7. Debug + Reports + CI/CD + Build Framework",
+  "title": "Bài 41 - [Playwright Typescript] Xây dựng Framework Playwright hoàn chỉnh với AI",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/398",
+  "export_scope": "metadata_only",
+  "content_status": "metadata_only",
+  "content": null,
+  "json_path": "chapters/chapter-07/lesson-042.json",
+  "markdown_path": "chapters/chapter-07/lesson-042.md",
+  "short_description_html": "<p>✅ Kiến trúc một framework Playwright hoàn chỉnh<br>✅ Ghép POM, Fixture, config đa môi trường, data test và report<br>✅ Dùng Claude Code và bộ kit claude-testing-skills để dựng framework<br>✅ Chạy trên CI và đọc report<br>✅ Duyệt lại framework do AI dựng và hướng đi tiếp theo</p>",
+  "missing_content_reason": "Trang nguồn chỉ có tiêu đề và mô tả ngắn; không có vùng nội dung bài giảng.",
+  "source_checked_at": "2026-11-19T08:26:18.640546+07:00",
+  "dom_evidence": {
+    "lesson_body_count": 0,
+    "extra_content_container_count": 0,
+    "main_code_count": 0,
+    "main_image_count": 0,
+    "main_media_count": 0
+  }
+}

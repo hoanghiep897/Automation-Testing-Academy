@@ -1,0 +1,307 @@
+{
+  "scope": "full_course_content",
+  "updated_at": "2026-11-19T08:26:20.732062+07:00",
+  "catalog_exported": 42,
+  "catalog_failed": 0,
+  "full_content_exported": 34,
+  "full_content_skipped": 8,
+  "lessons": {
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/399": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-001.json",
+      "markdown_path": "chapters/chapter-01/lesson-001.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T07:57:24.429368+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/400": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-002.json",
+      "markdown_path": "chapters/chapter-01/lesson-002.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T07:57:41.304969+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/401": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-003.json",
+      "markdown_path": "chapters/chapter-01/lesson-003.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T07:57:54.350644+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/402": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-004.json",
+      "markdown_path": "chapters/chapter-01/lesson-004.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:09:28.476155+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/403": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-005.json",
+      "markdown_path": "chapters/chapter-01/lesson-005.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:09:44.323265+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/404": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-006.json",
+      "markdown_path": "chapters/chapter-01/lesson-006.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:10:00.795915+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/405": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-007.json",
+      "markdown_path": "chapters/chapter-01/lesson-007.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:10:17.610164+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/406": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-008.json",
+      "markdown_path": "chapters/chapter-01/lesson-008.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:10:33.925953+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/407": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-009.json",
+      "markdown_path": "chapters/chapter-01/lesson-009.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:10:51.036733+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/408": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-01/lesson-010.json",
+      "markdown_path": "chapters/chapter-01/lesson-010.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:11:08.271542+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/367": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-011.json",
+      "markdown_path": "chapters/chapter-02/lesson-011.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:11:17.147330+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/368": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-012.json",
+      "markdown_path": "chapters/chapter-02/lesson-012.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:11:36.987627+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/369": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-013.json",
+      "markdown_path": "chapters/chapter-02/lesson-013.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:11:58.742939+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/370": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-014.json",
+      "markdown_path": "chapters/chapter-02/lesson-014.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:12:18.910006+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/371": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-015.json",
+      "markdown_path": "chapters/chapter-02/lesson-015.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:12:41.182799+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/372": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-016.json",
+      "markdown_path": "chapters/chapter-02/lesson-016.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:13:01.587997+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/373": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-017.json",
+      "markdown_path": "chapters/chapter-02/lesson-017.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:13:23.221063+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/374": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-02/lesson-018.json",
+      "markdown_path": "chapters/chapter-02/lesson-018.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:13:44.370303+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/375": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-03/lesson-019.json",
+      "markdown_path": "chapters/chapter-03/lesson-019.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:14:04.854775+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/376": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-03/lesson-020.json",
+      "markdown_path": "chapters/chapter-03/lesson-020.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:14:25.062028+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/377": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-03/lesson-021.json",
+      "markdown_path": "chapters/chapter-03/lesson-021.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:14:47.661491+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/378": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-03/lesson-022.json",
+      "markdown_path": "chapters/chapter-03/lesson-022.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:17:26.341339+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/379": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-03/lesson-023.json",
+      "markdown_path": "chapters/chapter-03/lesson-023.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:17:54.440980+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/380": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-04/lesson-024.json",
+      "markdown_path": "chapters/chapter-04/lesson-024.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:18:22.330570+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/381": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-04/lesson-025.json",
+      "markdown_path": "chapters/chapter-04/lesson-025.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:18:53.877192+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/382": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-04/lesson-026.json",
+      "markdown_path": "chapters/chapter-04/lesson-026.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:19:21.654765+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/383": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-04/lesson-027.json",
+      "markdown_path": "chapters/chapter-04/lesson-027.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:19:50.514728+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/384": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-04/lesson-028.json",
+      "markdown_path": "chapters/chapter-04/lesson-028.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:20:19.660529+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/385": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-05/lesson-029.json",
+      "markdown_path": "chapters/chapter-05/lesson-029.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:20:46.520723+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/386": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-05/lesson-030.json",
+      "markdown_path": "chapters/chapter-05/lesson-030.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:21:14.386158+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/387": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-05/lesson-031.json",
+      "markdown_path": "chapters/chapter-05/lesson-031.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:21:41.769531+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/388": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-05/lesson-032.json",
+      "markdown_path": "chapters/chapter-05/lesson-032.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:22:08.546468+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/389": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-05/lesson-033.json",
+      "markdown_path": "chapters/chapter-05/lesson-033.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:22:35.556108+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/390": {
+      "status": "content_exported",
+      "json_path": "chapters/chapter-05/lesson-034.json",
+      "markdown_path": "chapters/chapter-05/lesson-034.md",
+      "content_status": "exported",
+      "updated_at": "2026-11-19T08:23:03.262796+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/391": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-05/lesson-035.json",
+      "markdown_path": "chapters/chapter-05/lesson-035.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:25:17.665875+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/392": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-06/lesson-036.json",
+      "markdown_path": "chapters/chapter-06/lesson-036.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:25:26.531742+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/393": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-06/lesson-037.json",
+      "markdown_path": "chapters/chapter-06/lesson-037.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:25:35.306746+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/394": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-06/lesson-038.json",
+      "markdown_path": "chapters/chapter-06/lesson-038.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:25:43.902636+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/395": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-07/lesson-039.json",
+      "markdown_path": "chapters/chapter-07/lesson-039.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:25:52.502477+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/396": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-07/lesson-040.json",
+      "markdown_path": "chapters/chapter-07/lesson-040.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:26:01.142291+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/397": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-07/lesson-041.json",
+      "markdown_path": "chapters/chapter-07/lesson-041.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:26:09.946020+07:00"
+    },
+    "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/398": {
+      "status": "metadata_only",
+      "json_path": "chapters/chapter-07/lesson-042.json",
+      "markdown_path": "chapters/chapter-07/lesson-042.md",
+      "content_status": "metadata_only",
+      "updated_at": "2026-11-19T08:26:18.642466+07:00"
+    }
+  },
+  "sample_limit": 42,
+  "full_content_failed": 0,
+  "metadata_only": 8
+}

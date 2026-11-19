@@ -1,0 +1,23 @@
+{
+  "order": 39,
+  "source_id": "395",
+  "chapter_order": 7,
+  "chapter_title": "7. Debug + Reports + CI/CD + Build Framework",
+  "title": "Bài 38 - [Playwright Typescript] Debug lỗi với UI Mode, Trace Viewer, Screenshot và Video",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/395",
+  "export_scope": "metadata_only",
+  "content_status": "metadata_only",
+  "content": null,
+  "json_path": "chapters/chapter-07/lesson-039.json",
+  "markdown_path": "chapters/chapter-07/lesson-039.md",
+  "short_description_html": "<p>✅ Chạy và xem lại test với UI Mode<br>✅ Debug từng bước với --debug, Playwright Inspector và page.pause()<br>✅ Đọc Trace Viewer để tìm nguyên nhân lỗi<br>✅ Dùng Screenshot và Video khi test lỗi<br>✅ Dùng Claude Code và bộ kit claude-testing-skills để chạy, sửa lỗi test và kiểm tra cách sửa do AI đưa ra</p>",
+  "missing_content_reason": "Trang nguồn chỉ có tiêu đề và mô tả ngắn; không có vùng nội dung bài giảng.",
+  "source_checked_at": "2026-11-19T08:25:52.501463+07:00",
+  "dom_evidence": {
+    "lesson_body_count": 0,
+    "extra_content_container_count": 0,
+    "main_code_count": 0,
+    "main_image_count": 0,
+    "main_media_count": 0
+  }
+}

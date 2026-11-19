@@ -1,0 +1,23 @@
+{
+  "order": 37,
+  "source_id": "393",
+  "chapter_order": 6,
+  "chapter_title": "6. API Testing + Kết hợp API với UI",
+  "title": "Bài 36 - [Playwright Typescript] Xử lý Authentication, Param, Pagination, Multipart và cấu trúc API Framework",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/393",
+  "export_scope": "metadata_only",
+  "content_status": "metadata_only",
+  "content": null,
+  "json_path": "chapters/chapter-06/lesson-037.json",
+  "markdown_path": "chapters/chapter-06/lesson-037.md",
+  "short_description_html": "<p>✅ Xác thực khi gọi API: token, Basic Auth và API Key<br>✅ Truyền Param, query và xử lý Pagination<br>✅ Gửi dữ liệu dạng form, Multipart và upload file qua API<br>✅ Cấu trúc API Framework: client, service, data và test<br>✅ Dùng AI để dựng API Framework và kiểm tra code do AI sinh ra</p>",
+  "missing_content_reason": "Trang nguồn chỉ có tiêu đề và mô tả ngắn; không có vùng nội dung bài giảng.",
+  "source_checked_at": "2026-11-19T08:25:35.305272+07:00",
+  "dom_evidence": {
+    "lesson_body_count": 0,
+    "extra_content_container_count": 0,
+    "main_code_count": 0,
+    "main_image_count": 0,
+    "main_media_count": 0
+  }
+}

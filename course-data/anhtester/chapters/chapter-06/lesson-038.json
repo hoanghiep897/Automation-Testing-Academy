@@ -1,0 +1,23 @@
+{
+  "order": 38,
+  "source_id": "394",
+  "chapter_order": 6,
+  "chapter_title": "6. API Testing + Kết hợp API với UI",
+  "title": "Bài 37 - [Playwright Typescript] Network Interception và kết hợp API với UI",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/394",
+  "export_scope": "metadata_only",
+  "content_status": "metadata_only",
+  "content": null,
+  "json_path": "chapters/chapter-06/lesson-038.json",
+  "markdown_path": "chapters/chapter-06/lesson-038.md",
+  "short_description_html": "<p>✅ Network Interception là gì - theo dõi và chặn request<br>✅ Giả lập response với route và fulfill<br>✅ Chờ và kiểm tra request, response khi thao tác giao diện<br>✅ Kết hợp API với UI: tạo dữ liệu bằng API, kiểm tra trên giao diện<br>✅ Dùng AI để sinh mock API và kiểm tra code do AI sinh ra</p>",
+  "missing_content_reason": "Trang nguồn chỉ có tiêu đề và mô tả ngắn; không có vùng nội dung bài giảng.",
+  "source_checked_at": "2026-11-19T08:25:43.901073+07:00",
+  "dom_evidence": {
+    "lesson_body_count": 0,
+    "extra_content_container_count": 0,
+    "main_code_count": 0,
+    "main_image_count": 0,
+    "main_media_count": 0
+  }
+}

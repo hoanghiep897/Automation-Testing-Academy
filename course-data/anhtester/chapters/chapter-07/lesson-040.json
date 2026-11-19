@@ -1,0 +1,23 @@
+{
+  "order": 40,
+  "source_id": "396",
+  "chapter_order": 7,
+  "chapter_title": "7. Debug + Reports + CI/CD + Build Framework",
+  "title": "Bài 39 - [Playwright Typescript] Cài đặt và sử dụng HTML Report, Allure Report",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/396",
+  "export_scope": "metadata_only",
+  "content_status": "metadata_only",
+  "content": null,
+  "json_path": "chapters/chapter-07/lesson-040.json",
+  "markdown_path": "chapters/chapter-07/lesson-040.md",
+  "short_description_html": "<p>✅ HTML Report có sẵn của Playwright và cách đọc<br>✅ Cài đặt Allure Report với allure-playwright<br>✅ Đính kèm screenshot, video, trace và bước test vào report<br>✅ Dùng AI để phân tích report và kiểm tra kết luận do AI đưa ra</p>",
+  "missing_content_reason": "Trang nguồn chỉ có tiêu đề và mô tả ngắn; không có vùng nội dung bài giảng.",
+  "source_checked_at": "2026-11-19T08:26:01.140281+07:00",
+  "dom_evidence": {
+    "lesson_body_count": 0,
+    "extra_content_container_count": 0,
+    "main_code_count": 0,
+    "main_image_count": 0,
+    "main_media_count": 0
+  }
+}

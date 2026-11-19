@@ -1,0 +1,954 @@
+{
+  "order": 11,
+  "source_id": "367",
+  "chapter_order": 2,
+  "chapter_title": "2. Playwright TypeScript + Locator",
+  "title": "[Playwright Typescript] TÀI NGUYÊN KHOÁ HỌC",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/367",
+  "export_scope": "full_lesson_content",
+  "content_status": "exported",
+  "content": {
+    "html": "<p><strong>Perfex CRM</strong>&nbsp;(Anh Tester):&nbsp;<a href=\"https://crm.anhtester.com/admin/authentication\">https://crm.anhtester.com/admin/authentication</a>\n&nbsp;\n<strong>RISE CRM</strong>&nbsp;(Anh Tester):&nbsp;<a href=\"https://rise.anhtester.com/signin\">https://rise.anhtester.com/signin</a>\n&nbsp;\n<strong>eCommerce CMS</strong>&nbsp;(Anh Tester):&nbsp;<a href=\"https://cms.anhtester.com/login\">https://cms.anhtester.com/login</a>\n&nbsp;\n<span><strong>admin@example.com</strong></span></p>\n<p><span><strong>123456</strong></span>\n</p>\n<p>\n<strong>ERP và HRM</strong>&nbsp;(Anh Tester):&nbsp;<a href=\"https://hrm.anhtester.com/erp/login\">https://hrm.anhtester.com/erp/login</a></p>\n<p><span><strong>admin_example</strong></span></p>\n<p><span><strong>123456</strong></span>\n</p>\n<p>&nbsp;</p>\n<h2>⭐️Website rèn luyện code auto test</h2>\n<p><em><span><strong><span>Demo QA (component web):</span></strong>&nbsp;<a href=\"https://demoqa.com/\">https://demoqa.com/</a><br><br><span><strong>The Internet App (component web):</strong></span> <a href=\"https://the-internet.herokuapp.com/\">https://the-internet.herokuapp.com/</a><br><br><span><strong>Lambdatest (component web): </strong></span><a href=\"https://www.lambdatest.com/selenium-playground/\">https://www.lambdatest.com/selenium-playground/</a><br><br><strong><span>POS: </span></strong><a href=\"https://saleserpdemo.bdtask-demo.com/v10_demo/login\">https://saleserpdemo.bdtask-demo.com/v10_demo/login</a><br><br><strong><span>eCommerce CMS:</span></strong> <a href=\"https://demo.activeitzone.com/ecommerce/login\">https://demo.activeitzone.com/ecommerce/login</a><br><br><span><strong>Orange HRM:</strong></span> <a href=\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</a><br><br><span><strong>HRM GO: </strong></span><a href=\"https://demo.workdo.io/hrmgo/login\">https://demo.workdo.io/hrmgo/login</a><br><br><span><strong>Perfex CRM (Anh Tester):</strong></span> <a href=\"https://crm.anhtester.com/admin/authentication\">https://crm.anhtester.com/admin/authentication</a><br><br><span><strong>RISE CRM (Anh Tester):</strong></span> <a href=\"https://rise.anhtester.com/signin\">https://rise.anhtester.com/signin</a><br><br><span><strong>eCommerce CMS (Anh Tester):</strong></span> <a href=\"https://cms.anhtester.com/login\">https://cms.anhtester.com/login</a><br><br><span><strong>eCommerce CMS (Anh Tester):</strong></span> <a href=\"https://ecommerce.anhtester.com/login\">https://ecommerce.anhtester.com/login</a><br><br><span><strong>ERP và HRM (Anh Tester):</strong></span> <a href=\"https://hrm.anhtester.com/erp/login\">https://hrm.anhtester.com/erp/login</a><br></span></em></p>\n<p><em><strong><span><br>Anh Tester sẽ cập nhật thêm cái hay hay cho các bạn !!</span></strong></em></p>\n",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Perfex CRM"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " (Anh Tester): "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://crm.anhtester.com/admin/authentication"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://crm.anhtester.com/admin/authentication"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n \n"
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "RISE CRM"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " (Anh Tester): "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://rise.anhtester.com/signin"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://rise.anhtester.com/signin"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n \n"
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "eCommerce CMS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " (Anh Tester): "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://cms.anhtester.com/login"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://cms.anhtester.com/login"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n \n"
+          },
+          {
+            "type": "element",
+            "tag": "span",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "admin@example.com"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "order": 1
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "123456"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 2
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "ERP và HRM"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " (Anh Tester): "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://hrm.anhtester.com/erp/login"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://hrm.anhtester.com/erp/login"
+              }
+            ]
+          }
+        ],
+        "order": 3
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "admin_example"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "order": 4
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "123456"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 5
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 6
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "⭐️Website rèn luyện code auto test"
+          }
+        ],
+        "order": 7
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "em",
+            "children": [
+              {
+                "type": "element",
+                "tag": "span",
+                "children": [
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Demo QA (component web):"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://demoqa.com/"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://demoqa.com/"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "The Internet App (component web):"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://the-internet.herokuapp.com/"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://the-internet.herokuapp.com/"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Lambdatest (component web): "
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://www.lambdatest.com/selenium-playground/"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://www.lambdatest.com/selenium-playground/"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "POS: "
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://saleserpdemo.bdtask-demo.com/v10_demo/login"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://saleserpdemo.bdtask-demo.com/v10_demo/login"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "eCommerce CMS:"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://demo.activeitzone.com/ecommerce/login"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://demo.activeitzone.com/ecommerce/login"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Orange HRM:"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "HRM GO: "
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://demo.workdo.io/hrmgo/login"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://demo.workdo.io/hrmgo/login"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Perfex CRM (Anh Tester):"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://crm.anhtester.com/admin/authentication"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://crm.anhtester.com/admin/authentication"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "RISE CRM (Anh Tester):"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://rise.anhtester.com/signin"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://rise.anhtester.com/signin"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "eCommerce CMS (Anh Tester):"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://cms.anhtester.com/login"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://cms.anhtester.com/login"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "eCommerce CMS (Anh Tester):"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://ecommerce.anhtester.com/login"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://ecommerce.anhtester.com/login"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "ERP và HRM (Anh Tester):"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://hrm.anhtester.com/erp/login"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://hrm.anhtester.com/erp/login"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "order": 8
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "em",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "children": [
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "text": "Anh Tester sẽ cập nhật thêm cái hay hay cho các bạn !!"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "order": 9
+      }
+    ]
+  },
+  "json_path": "chapters/chapter-02/lesson-011.json",
+  "markdown_path": "chapters/chapter-02/lesson-011.md",
+  "exported_at": "2026-11-19T08:11:17.146025+07:00",
+  "short_description_html": "<p>✅ Tài nguyên cài đặt môi trường dùng trong khoá học<br>✅ Các website rèn luyện code auto test</p>",
+  "images": [],
+  "media": [],
+  "links": [
+    {
+      "order": 1,
+      "text": "https://crm.anhtester.com/admin/authentication",
+      "url": "https://crm.anhtester.com/admin/authentication",
+      "download": false
+    },
+    {
+      "order": 2,
+      "text": "https://rise.anhtester.com/signin",
+      "url": "https://rise.anhtester.com/signin",
+      "download": false
+    },
+    {
+      "order": 3,
+      "text": "https://cms.anhtester.com/login",
+      "url": "https://cms.anhtester.com/login",
+      "download": false
+    },
+    {
+      "order": 4,
+      "text": "https://hrm.anhtester.com/erp/login",
+      "url": "https://hrm.anhtester.com/erp/login",
+      "download": false
+    },
+    {
+      "order": 5,
+      "text": "https://demoqa.com/",
+      "url": "https://demoqa.com/",
+      "download": false
+    },
+    {
+      "order": 6,
+      "text": "https://the-internet.herokuapp.com/",
+      "url": "https://the-internet.herokuapp.com/",
+      "download": false
+    },
+    {
+      "order": 7,
+      "text": "https://www.lambdatest.com/selenium-playground/",
+      "url": "https://www.lambdatest.com/selenium-playground/",
+      "download": false
+    },
+    {
+      "order": 8,
+      "text": "https://saleserpdemo.bdtask-demo.com/v10_demo/login",
+      "url": "https://saleserpdemo.bdtask-demo.com/v10_demo/login",
+      "download": false
+    },
+    {
+      "order": 9,
+      "text": "https://demo.activeitzone.com/ecommerce/login",
+      "url": "https://demo.activeitzone.com/ecommerce/login",
+      "download": false
+    },
+    {
+      "order": 10,
+      "text": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+      "download": false
+    },
+    {
+      "order": 11,
+      "text": "https://demo.workdo.io/hrmgo/login",
+      "url": "https://demo.workdo.io/hrmgo/login",
+      "download": false
+    },
+    {
+      "order": 12,
+      "text": "https://crm.anhtester.com/admin/authentication",
+      "url": "https://crm.anhtester.com/admin/authentication",
+      "download": false
+    },
+    {
+      "order": 13,
+      "text": "https://rise.anhtester.com/signin",
+      "url": "https://rise.anhtester.com/signin",
+      "download": false
+    },
+    {
+      "order": 14,
+      "text": "https://cms.anhtester.com/login",
+      "url": "https://cms.anhtester.com/login",
+      "download": false
+    },
+    {
+      "order": 15,
+      "text": "https://ecommerce.anhtester.com/login",
+      "url": "https://ecommerce.anhtester.com/login",
+      "download": false
+    },
+    {
+      "order": 16,
+      "text": "https://hrm.anhtester.com/erp/login",
+      "url": "https://hrm.anhtester.com/erp/login",
+      "download": false
+    }
+  ],
+  "assignment_link": null,
+  "assets": [],
+  "quality": {
+    "checked_at": "2026-11-19T08:11:17.145949+07:00",
+    "passed": true,
+    "checks": {
+      "code_exact_html": true,
+      "code_exact_json": true,
+      "code_markdown_whitespace": true,
+      "headings_exact": true,
+      "table_count_matches": true,
+      "image_count_matches": true,
+      "paragraph_count_matches": true,
+      "list_count_matches": true,
+      "blockquote_count_matches": true,
+      "all_cleaned_text_preserved": true,
+      "content_nonempty": true,
+      "no_form_or_script": true
+    },
+    "heading_count": 1,
+    "code_block_count": 0,
+    "table_count": 0,
+    "image_count": 0,
+    "code_sha256": [],
+    "content_text_sha256": "29afa50cabf5a77f779ea15810b2ff523e7364b8dd6efab1cd81940d86e79a7b",
+    "note": "JSON/HTML preserve code exactly. Markdown adds the required final line ending before a closing fence when absent in the source."
+  },
+  "assignment": null,
+  "redacted_url_parameter_count": 0
+}

@@ -1,0 +1,23 @@
+{
+  "order": 41,
+  "source_id": "397",
+  "chapter_order": 7,
+  "chapter_title": "7. Debug + Reports + CI/CD + Build Framework",
+  "title": "Bài 40 - [Playwright Typescript] CI/CD với GitHub Actions cho Playwright",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/397",
+  "export_scope": "metadata_only",
+  "content_status": "metadata_only",
+  "content": null,
+  "json_path": "chapters/chapter-07/lesson-041.json",
+  "markdown_path": "chapters/chapter-07/lesson-041.md",
+  "short_description_html": "<p>✅ CI/CD là gì và vì sao cần chạy test tự động trên CI<br>✅ Tạo workflow GitHub Actions cho Playwright<br>✅ Chạy test khi push, khi tạo Pull Request và theo lịch<br>✅ Lưu report, trace và dùng secrets cho tài khoản test<br>✅ Dùng AI để sinh workflow và kiểm tra file workflow do AI sinh ra</p>",
+  "missing_content_reason": "Trang nguồn chỉ có tiêu đề và mô tả ngắn; không có vùng nội dung bài giảng.",
+  "source_checked_at": "2026-11-19T08:26:09.944240+07:00",
+  "dom_evidence": {
+    "lesson_body_count": 0,
+    "extra_content_container_count": 0,
+    "main_code_count": 0,
+    "main_image_count": 0,
+    "main_media_count": 0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "order": 35,
+  "source_id": "391",
+  "chapter_order": 5,
+  "chapter_title": "5. File Config + Truyền Data Test (Data Driven) + Parallel Execution",
+  "title": "Bài 34 - [Playwright Typescript] Chạy test song song với Parallel Execution",
+  "url": "https://anhtester.com/learn/website-and-api-testing-automation-with-playwright-javascript-typescript-day-code-js-ts-tu-dau/391",
+  "export_scope": "metadata_only",
+  "content_status": "metadata_only",
+  "content": null,
+  "json_path": "chapters/chapter-05/lesson-035.json",
+  "markdown_path": "chapters/chapter-05/lesson-035.md",
+  "short_description_html": "<p>✅ Chạy song song là gì: worker và cách Playwright chia test<br>✅ Cấu hình workers và fullyParallel<br>✅ Chế độ chạy của describe: parallel và serial<br>✅ Viết test độc lập để chạy song song không lỗi<br>✅ Dùng AI để tìm test phụ thuộc nhau và kiểm tra code do AI sinh ra</p>",
+  "missing_content_reason": "Trang nguồn chỉ có tiêu đề và mô tả ngắn; không có vùng nội dung bài giảng.",
+  "source_checked_at": "2026-11-19T08:25:17.664070+07:00",
+  "dom_evidence": {
+    "lesson_body_count": 0,
+    "extra_content_container_count": 0,
+    "main_code_count": 0,
+    "main_image_count": 0,
+    "main_media_count": 0
+  }
+}
