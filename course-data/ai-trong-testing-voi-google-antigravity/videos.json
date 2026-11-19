@@ -1,0 +1,302 @@
+{
+  "course": {
+    "title": "Khoá học sử dụng AI trong Testing với Google Antigravity",
+    "url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/283"
+  },
+  "video_count": 9,
+  "downloaded_files": 0,
+  "videos": [
+    {
+      "lesson_order": 1,
+      "lesson_title": "Bài 1 - [AI Test Automation] Con đường ứng dụng AI trong Test Automation hiện nay",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/283",
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/k8nEibYZwis",
+      "title": "[AI Test Automation] Con đường ứng dụng AI trong Test Automation hiện nay",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/k8nEibYZwis",
+          "title": "[AI Test Automation] Con đường ứng dụng AI trong Test Automation hiện nay",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "k8nEibYZwis",
+      "watch_url": "https://www.youtube.com/watch?v=k8nEibYZwis",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 1 - Con đường ứng dụng AI trong Test Automation hiện nay",
+      "thumbnail_url": "https://i.ytimg.com/vi/k8nEibYZwis/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 2,
+      "lesson_title": "Bài 2 - [AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/284",
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/UZ3BsPsbg6g",
+      "title": "[AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/UZ3BsPsbg6g",
+          "title": "[AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "UZ3BsPsbg6g",
+      "watch_url": "https://www.youtube.com/watch?v=UZ3BsPsbg6g",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 2 - Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+      "thumbnail_url": "https://i.ytimg.com/vi/UZ3BsPsbg6g/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 3,
+      "lesson_title": "Bài 3 - [AI Test Automation] Cách viết Prompt cho AI hiệu quả và tối ưu tài nguyên",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/285",
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/9tFhoKf8Wr4",
+      "title": "[AI Test Automation] Cách viết Prompt cho AI hiệu quả và tối ưu tài nguyên",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/9tFhoKf8Wr4",
+          "title": "[AI Test Automation] Cách viết Prompt cho AI hiệu quả và tối ưu tài nguyên",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        },
+        {
+          "order": 2,
+          "type": "a",
+          "url": "https://www.youtube.com/watch?v=9tFhoKf8Wr4",
+          "title": "https://www.youtube.com/watch?v=9tFhoKf8Wr4",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "9tFhoKf8Wr4",
+      "watch_url": "https://www.youtube.com/watch?v=9tFhoKf8Wr4",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 3 - Phần 1 - Cách viết Prompt cho AI hiệu quả và tối ưu tài nguyên",
+      "thumbnail_url": "https://i.ytimg.com/vi/9tFhoKf8Wr4/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 3,
+      "lesson_title": "Bài 3 - [AI Test Automation] Cách viết Prompt cho AI hiệu quả và tối ưu tài nguyên",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/285",
+      "order": 2,
+      "source_url": "https://www.youtube.com/watch?v=MowBjWnohOk",
+      "title": "https://www.youtube.com/watch?v=MowBjWnohOk",
+      "references": [
+        {
+          "order": 3,
+          "type": "a",
+          "url": "https://www.youtube.com/watch?v=MowBjWnohOk",
+          "title": "https://www.youtube.com/watch?v=MowBjWnohOk",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "MowBjWnohOk",
+      "watch_url": "https://www.youtube.com/watch?v=MowBjWnohOk",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 3 - Phần 2 - Cách viết Prompt cho AI hiệu quả và tối ưu tài nguyên",
+      "thumbnail_url": "https://i.ytimg.com/vi/MowBjWnohOk/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 4,
+      "lesson_title": "Bài 4 - [AI Test Automation] Cách thiết lập SKILL WORKFLOW RULE cho AI Agent trên Antigravity",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/286",
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/AkI4D2tcWoM",
+      "title": "[AI Test Automation] Cách thiết lập SKILL WORKFLOW RULE cho AI Agent trên Antigravity",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/AkI4D2tcWoM",
+          "title": "[AI Test Automation] Cách thiết lập SKILL WORKFLOW RULE cho AI Agent trên Antigravity",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "AkI4D2tcWoM",
+      "watch_url": "https://www.youtube.com/watch?v=AkI4D2tcWoM",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 4 - Cách thiết lập SKILL WORKFLOW RULE cho AI Agent trên Antigravity",
+      "thumbnail_url": "https://i.ytimg.com/vi/AkI4D2tcWoM/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 5,
+      "lesson_title": "Bài 5 - [AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/287",
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/n7kNsbVEOEw",
+      "title": "[AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/n7kNsbVEOEw",
+          "title": "[AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        },
+        {
+          "order": 2,
+          "type": "a",
+          "url": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+          "title": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "n7kNsbVEOEw",
+      "watch_url": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 5 - Phần 1 - Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "thumbnail_url": "https://i.ytimg.com/vi/n7kNsbVEOEw/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 5,
+      "lesson_title": "Bài 5 - [AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/287",
+      "order": 2,
+      "source_url": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "title": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "references": [
+        {
+          "order": 3,
+          "type": "a",
+          "url": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+          "title": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "aAk0APkv2LI",
+      "watch_url": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 5 - Phần 2 - Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "thumbnail_url": "https://i.ytimg.com/vi/aAk0APkv2LI/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 6,
+      "lesson_title": "Bài 6 - [AI Test Automation] Thiết lập cho AI sử dụng MCP Server trên Antigravity",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/288",
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/3uktD7ud5ec",
+      "title": "[AI Test Automation] Thiết lập cho AI sử dụng MCP Server trên Antigravity",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/3uktD7ud5ec",
+          "title": "[AI Test Automation] Thiết lập cho AI sử dụng MCP Server trên Antigravity",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "3uktD7ud5ec",
+      "watch_url": "https://www.youtube.com/watch?v=3uktD7ud5ec",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 6 - Thiết lập cho AI sử dụng MCP Server trên Antigravity",
+      "thumbnail_url": "https://i.ytimg.com/vi/3uktD7ud5ec/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "lesson_order": 7,
+      "lesson_title": "Bài 7 - [AI Test Automation] Hoàn thiện project Test Automation xuất Report và chạy CI với GitHub Actions",
+      "lesson_url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/289",
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/P-NU-XK8KbY",
+      "title": "[AI Test Automation] Hoàn thiện project Test Automation xuất Report và chạy CI với GitHub Actions",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/P-NU-XK8KbY",
+          "title": "[AI Test Automation] Hoàn thiện project Test Automation xuất Report và chạy CI với GitHub Actions",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "P-NU-XK8KbY",
+      "watch_url": "https://www.youtube.com/watch?v=P-NU-XK8KbY",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 7 - Hoàn thiện project xuất Report và chạy CI với GitHub Actions",
+      "thumbnail_url": "https://i.ytimg.com/vi/P-NU-XK8KbY/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    }
+  ],
+  "lessons_without_video": [
+    {
+      "order": 8,
+      "title": "Bài 8 - [AI Test Automation] Sử dụng bộ Skill của Anh Tester trên Claude và Codex",
+      "url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/290"
+    }
+  ],
+  "repository_publication": {
+    "video_mode": "urls_only",
+    "video_files_included": 0,
+    "video_urls": 9,
+    "excluded_at_user_request": true
+  }
+}

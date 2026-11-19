@@ -1,0 +1,226 @@
+{
+  "order": 8,
+  "source_id": "290",
+  "chapter_order": 1,
+  "chapter_title": "1. Nội dung khoá học",
+  "title": "Bài 8 - [AI Test Automation] Sử dụng bộ Skill của Anh Tester trên Claude và Codex",
+  "url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/290",
+  "duration": "3 giờ",
+  "export_scope": "full_lesson_content",
+  "content_status": "exported",
+  "content": {
+    "html": "<h3 class=\"heading-element\">Claude Testing Kit 🚀</h3>\n<p><a href=\"https://github.com/anhtester/claude-testing-kit\">https://github.com/anhtester/claude-testing-kit</a></p>\n<p>&nbsp;</p>\n<h3 class=\"heading-element\">Codex Testing Kit 🚀</h3>\n<p><a href=\"https://github.com/anhtester/codex-testing-kit\">https://github.com/anhtester/codex-testing-kit</a></p>\n<p>&nbsp;</p>",
+    "blocks": [
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "class": [
+            "heading-element"
+          ]
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Claude Testing Kit 🚀"
+          }
+        ],
+        "order": 1
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://github.com/anhtester/claude-testing-kit"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://github.com/anhtester/claude-testing-kit"
+              }
+            ]
+          }
+        ],
+        "order": 2
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 3
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "class": [
+            "heading-element"
+          ]
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Codex Testing Kit 🚀"
+          }
+        ],
+        "order": 4
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://github.com/anhtester/codex-testing-kit"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://github.com/anhtester/codex-testing-kit"
+              }
+            ]
+          }
+        ],
+        "order": 5
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 6
+      }
+    ]
+  },
+  "json_path": "chapters/chapter-01/lesson-008.json",
+  "markdown_path": "chapters/chapter-01/lesson-008.md",
+  "exported_at": "2026-11-19T12:55:02.913605+07:00",
+  "short_description_html": "",
+  "intro": {
+    "html": "\n                                                <div class=\"card-body\">\n                            \n                                                        \n                                                            <p class=\"text-muted fs-14 mb-0\">\n                                    <i class=\"isax isax-document-text me-1\"></i>\n                                     3 giờ                                                                     </p>\n                                                                                </div>\n                    ",
+    "blocks": [
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "card-body"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "attributes": {
+              "class": [
+                "text-muted",
+                "fs-14",
+                "mb-0"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "i",
+                "attributes": {
+                  "class": [
+                    "isax",
+                    "isax-document-text",
+                    "me-1"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "\n                                     3 giờ                                                                     "
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 1
+      }
+    ]
+  },
+  "images": [],
+  "media": [],
+  "links": [
+    {
+      "order": 1,
+      "text": "https://github.com/anhtester/claude-testing-kit",
+      "url": "https://github.com/anhtester/claude-testing-kit",
+      "download": false
+    },
+    {
+      "order": 2,
+      "text": "https://github.com/anhtester/codex-testing-kit",
+      "url": "https://github.com/anhtester/codex-testing-kit",
+      "download": false
+    }
+  ],
+  "videos": [],
+  "media_audit": {
+    "declared_media_references": 0,
+    "declared_urls": [],
+    "intro_iframe_count": 0
+  },
+  "assignment_link": null,
+  "assets": [],
+  "quality": {
+    "checked_at": "2026-11-19T12:55:02.913571+07:00",
+    "passed": true,
+    "checks": {
+      "code_exact_html": true,
+      "code_exact_json": true,
+      "code_markdown_whitespace": true,
+      "headings_exact": true,
+      "table_count_matches": true,
+      "image_count_matches": true,
+      "paragraph_count_matches": true,
+      "list_count_matches": true,
+      "blockquote_count_matches": true,
+      "all_cleaned_text_preserved": true,
+      "content_nonempty": true,
+      "no_form_or_script": true
+    },
+    "heading_count": 2,
+    "code_block_count": 0,
+    "table_count": 0,
+    "image_count": 0,
+    "code_sha256": [],
+    "content_text_sha256": "03dfc577913cdbe3ff0313ec1a0055ce99677ebe0a02a674738770c4c6975fbd",
+    "note": "JSON/HTML preserve code exactly. Markdown adds the required final line ending before a closing fence when absent in the source."
+  },
+  "assignment": null,
+  "redacted_url_parameter_count": 0,
+  "content_kind": "resource_links_only"
+}

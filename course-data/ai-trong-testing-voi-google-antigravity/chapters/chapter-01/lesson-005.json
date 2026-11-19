@@ -1,0 +1,3708 @@
+{
+  "order": 5,
+  "source_id": "287",
+  "chapter_order": 1,
+  "chapter_title": "1. Nội dung khoá học",
+  "title": "Bài 5 - [AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+  "url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/287",
+  "duration": "5 giờ 27 phút (2 phần)",
+  "export_scope": "full_lesson_content",
+  "content_status": "exported",
+  "content": {
+    "html": "<h2>✳️ Vai trò của Plans</h2>\n<p><strong>Plans giúp bạn:</strong></p>\n<ul>\n<li>Chuẩn hóa cách sử dụng AI trong dự án</li>\n<li>Đồng bộ giữa các QA Manual / Automation Engineer</li>\n<li>Tối ưu hiệu suất (tránh dùng AI lung tung)</li>\n<li>Đảm bảo output có chất lượng ổn định, đồng nhất</li>\n<li>Giảm phụ thuộc vào kinh nghiệm cá nhân</li>\n</ul>\n<p><br>👉 Nói ngắn gọn:</p>\n<blockquote class=\"rt-quote\">\n<p><strong>PLAN = Quy trình hoàn chỉnh để AI làm việc end-to-end<br><br></strong></p>\n</blockquote>\n<p>An sẽ chia sẻ toàn bộ chiến lược mà An (Anh Tester) đã xây dựng trong bộ <strong><a href=\"https://github.com/anhtester/antigravity-testing-kit\">Antigravity Testing Kit</a></strong>&nbsp;— một framework quy trình AI Testing hoàn chỉnh, thiết kế cho cả <strong>Manual Tester</strong> lẫn <strong>Automation Engineer</strong>.<br><br><strong>Repo:</strong> <a href=\"https://github.com/anhtester/antigravity-testing-kit\">https://github.com/anhtester/antigravity-testing-kit</a><br><br></p>\n<p>&nbsp;</p>\n<h2 id=\"---Kiến-Trúc-Tổng-Thể--Hai-Trụ-Cột-Song-Song_11\">✳️ Kiến Trúc Tổng Thể</h2>\n<p>Kế hoạch <strong>AI Testing</strong> toàn diện cần bao phủ&nbsp;cả hai mảng kiểm thử <strong>Manual và Automation.</strong><br><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png\" alt=\"\" width=\"1786\" height=\"343\"></a><br><br><strong>Nguyên tắc vàng:</strong> Manual Testing đi trước Automation Testing. Không bao giờ automate một tính năng mà chưa có test case rõ ràng.</p>\n<h2>&nbsp;</h2>\n<h2 id=\"--Trụ-Cột-1--AI-RBT---Quy-Trình-6-Bước-Cho-Manual-Testing_16\">📋 Trụ Cột 1: <strong>AI-Driven RBT</strong> Manual — Quy Trình 6 Bước</h2>\n<h3 id=\"Triết-lý---Human-Strategy---AI-Execution-_17\">Triết lý: \"Human Strategy + AI Execution\"</h3>\n<p>Đây là framework&nbsp;<strong>AI-Driven Risk-Based Testing</strong>&nbsp;(AI-RBT) — tận dụng tốc độ xử lý của AI để phân tích chi tiết, kết hợp với&nbsp;<strong>tư duy chiến lược RBT</strong>&nbsp;của con người để tối ưu hóa nguồn lực kiểm thử.<br><br></p>\n<pre class=\"line-numbers language-markdown\"><code class=\"language-markdown\">📐 CON NGƯỜI quyết định chiến lược\n🤖 AI thực thi chi tiết\n📐 CON NGƯỜI kiểm tra kết quả</code></pre>\n<p>&nbsp;</p>\n<h3 id=\"user-content-mô-hình-6-bước\">Mô hình 6 Bước</h3>\n<p><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png\" alt=\"\" width=\"1293\" height=\"176\"></a><br><br><span><strong>[!WARNING]</strong></span><br><strong>Bước 2</strong> và <strong>Bước 4</strong> có checkpoint bắt buộc — nếu bỏ qua, AI sẽ \"ảo giác\" (hallucinate) và sinh test case sai nghiêm trọng.</p>\n<h3><br>🎯 Quy trình vận hành Plan Manual</h3>\n<p><strong>Xem tại Repo</strong>: <a href=\"https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/manual\">https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/manual</a></p>\n<p><br><br></p>\n<h2 id=\"---Trụ-Cột-2--AI-Driven-Automation---Quy-Trình-6-Bước_63\">⚙️ Trụ Cột 2: AI-Driven Automation — Quy Trình 6 Bước</h2>\n<h3 id=\"Triết-lý---DOM-Recon-First---Self-Fix-Loop-_64\">Triết lý: \"DOM Recon First + Self-Fix Loop\"</h3>\n<p>Khác với Manual Testing (cần nhiều Human Checkpoint), <strong>Automation Testing</strong> cho phép&nbsp;<strong>tự động hóa mạnh mẽ hơn</strong>&nbsp;— nhưng với điều kiện AI phải inspect DOM thật, không bao giờ đoán bừa.<br><br></p>\n<h3 id=\"5-Nguyên-Tắc-Cốt-Lõi_66\">5 Nguyên Tắc Cốt Lõi</h3>\n<table class=\"rt-table\">\n<thead>\n<tr>\n<th>#</th>\n<th>Nguyên tắc</th>\n<th>Chi tiết</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td><strong>DOM Recon First</strong></td>\n<td>AI tự mở browser, inspect DOM thật. TUYỆT ĐỐI không đoán locator</td>\n</tr>\n<tr>\n<td>2</td>\n<td><strong>POM Architecture</strong></td>\n<td>Mọi script tuân thủ Page Object Model — phân tách Pages &amp; Tests</td>\n</tr>\n<tr>\n<td>3</td>\n<td><strong>Smart Waits</strong></td>\n<td>Không&nbsp;<code>Thread.sleep</code>, không&nbsp;<code>waitForTimeout</code>. Chỉ auto-waiting</td>\n</tr>\n<tr>\n<td>4</td>\n<td><strong>Deterministic Data</strong></td>\n<td>Test data unique + traceable, không hardcode</td>\n</tr>\n<tr>\n<td>5</td>\n<td><strong>Self-fix Loop</strong></td>\n<td>AI tự chạy → fail → đọc log → sửa → chạy lại → đến khi PASS</td>\n</tr>\n</tbody>\n</table>\n<h3>&nbsp;</h3>\n<h3 id=\"Mô-hình-6-Bước-_68\">Mô hình 6 Bước</h3>\n<p><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png\" alt=\"\" width=\"553\" height=\"1071\"></a></p>\n<p>&nbsp;</p>\n<h3>🎯 Quy trình vận hành Plan Automation</h3>\n<p><strong>Xem tại Repo</strong>: <a href=\"https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/automation\">https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/automation</a></p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<h2 id=\"--So-Sánh-Hai-Trụ-Cột_115\">🔄 So Sánh Hai Trụ Cột</h2>\n<table class=\"rt-table\">\n<thead>\n<tr>\n<th>Tiêu chí</th>\n<th>Manual (AI-RBT)</th>\n<th>Automation (AI-Driven)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Mục tiêu</strong></td>\n<td>Sinh Test Cases chất lượng cao</td>\n<td>Sinh Test Scripts chạy được</td>\n</tr>\n<tr>\n<td><strong>Mức tự động</strong></td>\n<td>Tuần tự, nhiều Human Checkpoint</td>\n<td>Có thể One-Click tự động 100%</td>\n</tr>\n<tr>\n<td><strong>Vai trò AI</strong></td>\n<td>Phân tích + Sinh nội dung</td>\n<td>Inspect DOM + Viết code + Tự sửa</td>\n</tr>\n<tr>\n<td><strong>Vai trò Human</strong></td>\n<td>Chiến lược, quyết định, review</td>\n<td>Review kiến trúc POM, nhận code final</td>\n</tr>\n<tr>\n<td><strong>Điểm nghẽn</strong></td>\n<td>Bước 2 (Q&amp;A) &amp; Bước 4 (RBT)</td>\n<td>Bước 2 (UI Recon) — cần browser thật</td>\n</tr>\n<tr>\n<td><strong>Đầu ra</strong></td>\n<td>Bảng Markdown → Jira/Excel</td>\n<td>Source code chạy PASS → Git commit</td>\n</tr>\n<tr>\n<td><strong>Số bước</strong></td>\n<td>6 bước</td>\n<td>6 bước (+ bước setup Project)</td>\n</tr>\n<tr>\n<td><strong>Anti-hallucination</strong></td>\n<td>Chia nhỏ module, Q&amp;A từng bước</td>\n<td>DOM Recon thật, Self-fix loop</td>\n</tr>\n</tbody>\n</table>\n<p><br><br></p>\n<h2 id=\"--Triết-Lý-Thiết-Kế--Human-AI-Collaboration_128\">🧠 Triết Lý Thiết Kế: Human-AI Collaboration</h2>\n<h3 id=\"Tại-sao-Manual-Testing-PHẢI-chạy-tuần-tự-_129\"><br>Tại sao Manual Testing PHẢI chạy tuần tự?</h3>\n<p><strong>Có 3 lý do cốt lõi:</strong></p>\n<ol>\n<li><strong>Điểm nghẽn ở Bước 2 (Analysis &amp; Q&amp;A):</strong><br>AI cần thời gian phân tích và đưa ra câu hỏi. Nếu chạy 1 lèo → AI tự đoán mò logic → Test Case sai trầm trọng.</li>\n<li><strong>Điểm chốt chặn nhân sự (Human in the Loop):</strong><br>Ở Bước 4 và 5, Tester phải tự đánh giá rủi ro trước khi cho AI sinh kịch bản chi tiết.</li>\n<li><strong>Chống Ảo giác (Anti-Hallucination):</strong><br>Nạp 1 tài liệu dài + bắt AI nhả ra hàng trăm kịch bản cùng lúc → AI mất tập trung, bỏ sót luồng.&nbsp;<strong>Xé nhỏ ra từng prompt</strong>&nbsp;mang lại chất lượng tuyệt đối.</li>\n</ol>\n<h3 id=\"Tại-sao-Automation-Testing-CÓ-THỂ-chạy-One-Click-_134\"><br>Tại sao Automation Testing CÓ THỂ chạy One-Click?</h3>\n<p>Vì AI có thể&nbsp;<strong>tự kiểm chứng</strong>&nbsp;kết quả:</p>\n<ul>\n<li>Locator sai? → DOM Recon phát hiện ngay</li>\n<li>Code lỗi? → Chạy test → đọc log → sửa → chạy lại</li>\n<li>Không cần human judgment để verify code chạy đúng hay sai</li>\n</ul>\n<h2>&nbsp;</h2>\n<h2 id=\"--10-Mẹo-Tối-Ưu-Khi-Áp-Dụng_138\">💡 10 Mẹo Tối Ưu Khi Áp Dụng</h2>\n<ol>\n<li><strong>Luôn chạy trong cùng 1 conversation</strong>&nbsp;— AI giữ context xuyên suốt</li>\n<li><strong>Bước 2 là quan trọng nhất</strong>&nbsp;cho Manual — đừng vội, trả lời kỹ</li>\n<li><strong>Chia module khi &gt;5</strong>&nbsp;— tránh AI bị quá tải thông tin</li>\n<li><strong>Review trước khi format</strong>&nbsp;— kiểm test cases ở Bước 5 trước khi sang Bước 6</li>\n<li><strong>Cung cấp tài khoản test</strong>&nbsp;— Automation cần login thật để inspect DOM</li>\n<li><strong>Không hardcode data</strong>&nbsp;— luôn dùng format traceable</li>\n<li><strong>Không hard sleep</strong>&nbsp;— chỉ smart waits / auto-waiting</li>\n<li><strong>Clean code trước commit</strong>&nbsp;— Bước 6 là bắt buộc, không bỏ qua</li>\n<li><strong>Kết hợp hai trụ cột</strong>&nbsp;— Sinh manual TC trước → chuyển sang automation</li>\n<li><strong>Đo lường kết quả</strong>&nbsp;— So sánh coverage trước/sau khi dùng AI</li>\n</ol>\n<h2>&nbsp;</h2>\n<h2 id=\"---Lộ-Trình-Triển-Khai-Thực-Tế_141\">🗺️ Lộ Trình Triển Khai Thực Tế</h2>\n<h3 id=\"Tuần-1-2--Thiết-lập-nền-tảng_142\">Tuần 1-2: Thiết lập nền tảng</h3>\n<ul>\n<li class=\"vditor-task\">&nbsp;Clone&nbsp;<a href=\"https://github.com/anhtester/antigravity-testing-kit\">Antigravity Testing Kit</a></li>\n<li class=\"vditor-task\">&nbsp;Copy thư mục&nbsp;<code>.agent/</code>&nbsp;vào project của bạn</li>\n<li class=\"vditor-task\">&nbsp;Đọc hiểu Plans (Manual + Automation)</li>\n<li class=\"vditor-task\">&nbsp;Chạy thử 1 flow Manual Testing đơn giản</li>\n</ul>\n<h3 id=\"Tuần-3-4--Áp-dụng-Manual-AI-RBT_144\">Tuần 3-4: Áp dụng Manual AI-RBT</h3>\n<ul>\n<li class=\"vditor-task\">&nbsp;Chọn 1 tính năng thực tế trong dự án</li>\n<li class=\"vditor-task\">&nbsp;Chạy đủ 6 bước AI-RBT tuần tự</li>\n<li class=\"vditor-task\">&nbsp;So sánh kết quả với test cases viết tay trước đó</li>\n<li class=\"vditor-task\">&nbsp;Đánh giá: Coverage mới vs. Coverage cũ</li>\n</ul>\n<h3 id=\"Tuần-5-6--Áp-dụng-Automation-AI-Driven_146\">Tuần 5-6: Áp dụng Automation AI-Driven</h3>\n<ul>\n<li class=\"vditor-task\"> Setup kiến trúc project (Bước chuẩn bị)</li>\n<li class=\"vditor-task\">&nbsp;Chạy One-Click cho 1 flow đơn giản (Login)</li>\n<li class=\"vditor-task\">&nbsp;Mở rộng sang flow phức tạp hơn</li>\n<li class=\"vditor-task\">&nbsp;Tích hợp CI/CD pipeline</li>\n</ul>\n<h3 id=\"Tuần-7---Scale---Optimize_148\">Tuần 7+: Scale &amp; Optimize</h3>\n<ul>\n<li class=\"vditor-task\">&nbsp;Training team sử dụng Plans</li>\n<li class=\"vditor-task\"> Tùy chỉnh Rules/Skills cho dự án cụ thể (cái này cần thiết)</li>\n<li class=\"vditor-task\">&nbsp;Tích hợp Jira/Xray để đồng bộ test management</li>\n<li class=\"vditor-task\">&nbsp;Xuất Test Cases sang Excel/Google Sheets tự động</li>\n</ul>",
+    "blocks": [
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ Vai trò của Plans"
+          }
+        ],
+        "order": 1
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Plans giúp bạn:"
+              }
+            ]
+          }
+        ],
+        "order": 2
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Chuẩn hóa cách sử dụng AI trong dự án"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Đồng bộ giữa các QA Manual / Automation Engineer"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Tối ưu hiệu suất (tránh dùng AI lung tung)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Đảm bảo output có chất lượng ổn định, đồng nhất"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Giảm phụ thuộc vào kinh nghiệm cá nhân"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 3
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "👉 Nói ngắn gọn:"
+          }
+        ],
+        "order": 4
+      },
+      {
+        "type": "blockquote",
+        "tag": "blockquote",
+        "attributes": {
+          "class": [
+            "rt-quote"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "PLAN = Quy trình hoàn chỉnh để AI làm việc end-to-end"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 5
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "An sẽ chia sẻ toàn bộ chiến lược mà An (Anh Tester) đã xây dựng trong bộ "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "link",
+                "tag": "a",
+                "attributes": {
+                  "href": "https://github.com/anhtester/antigravity-testing-kit"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Antigravity Testing Kit"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " — một framework quy trình AI Testing hoàn chỉnh, thiết kế cho cả "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Manual Tester"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " lẫn "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Automation Engineer"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Repo:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://github.com/anhtester/antigravity-testing-kit"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://github.com/anhtester/antigravity-testing-kit"
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 6
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 7
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "attributes": {
+          "id": "---Kiến-Trúc-Tổng-Thể--Hai-Trụ-Cột-Song-Song_11"
+        },
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ Kiến Trúc Tổng Thể"
+          }
+        ],
+        "order": 8
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Kế hoạch "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "AI Testing"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " toàn diện cần bao phủ cả hai mảng kiểm thử "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Manual và Automation."
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png",
+                  "alt": "",
+                  "width": "1786",
+                  "height": "343"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Nguyên tắc vàng:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " Manual Testing đi trước Automation Testing. Không bao giờ automate một tính năng mà chưa có test case rõ ràng."
+          }
+        ],
+        "order": 9
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 10
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "attributes": {
+          "id": "--Trụ-Cột-1--AI-RBT---Quy-Trình-6-Bước-Cho-Manual-Testing_16"
+        },
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "📋 Trụ Cột 1: "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "AI-Driven RBT"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " Manual — Quy Trình 6 Bước"
+          }
+        ],
+        "order": 11
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Triết-lý---Human-Strategy---AI-Execution-_17"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Triết lý: \"Human Strategy + AI Execution\""
+          }
+        ],
+        "order": 12
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Đây là framework "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "AI-Driven Risk-Based Testing"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " (AI-RBT) — tận dụng tốc độ xử lý của AI để phân tích chi tiết, kết hợp với "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "tư duy chiến lược RBT"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " của con người để tối ưu hóa nguồn lực kiểm thử."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 13
+      },
+      {
+        "type": "code_block",
+        "tag": "pre",
+        "attributes": {
+          "class": [
+            "line-numbers",
+            "language-markdown"
+          ]
+        },
+        "code": "📐 CON NGƯỜI quyết định chiến lược\n🤖 AI thực thi chi tiết\n📐 CON NGƯỜI kiểm tra kết quả",
+        "language": "markdown",
+        "order": 14
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 15
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "user-content-mô-hình-6-bước"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Mô hình 6 Bước"
+          }
+        ],
+        "order": 16
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png",
+                  "alt": "",
+                  "width": "1293",
+                  "height": "176"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "span",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "[!WARNING]"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Bước 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " và "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Bước 4"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " có checkpoint bắt buộc — nếu bỏ qua, AI sẽ \"ảo giác\" (hallucinate) và sinh test case sai nghiêm trọng."
+          }
+        ],
+        "order": 17
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "🎯 Quy trình vận hành Plan Manual"
+          }
+        ],
+        "order": 18
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Xem tại Repo"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/manual"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/manual"
+              }
+            ]
+          }
+        ],
+        "order": 19
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 20
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "attributes": {
+          "id": "---Trụ-Cột-2--AI-Driven-Automation---Quy-Trình-6-Bước_63"
+        },
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "⚙️ Trụ Cột 2: AI-Driven Automation — Quy Trình 6 Bước"
+          }
+        ],
+        "order": 21
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Triết-lý---DOM-Recon-First---Self-Fix-Loop-_64"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Triết lý: \"DOM Recon First + Self-Fix Loop\""
+          }
+        ],
+        "order": 22
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Khác với Manual Testing (cần nhiều Human Checkpoint), "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Automation Testing"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " cho phép "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "tự động hóa mạnh mẽ hơn"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " — nhưng với điều kiện AI phải inspect DOM thật, không bao giờ đoán bừa."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 23
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "5-Nguyên-Tắc-Cốt-Lõi_66"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "5 Nguyên Tắc Cốt Lõi"
+          }
+        ],
+        "order": 24
+      },
+      {
+        "type": "table",
+        "tag": "table",
+        "attributes": {
+          "class": [
+            "rt-table"
+          ]
+        },
+        "html": "<table class=\"rt-table\">\n<thead>\n<tr>\n<th>#</th>\n<th>Nguyên tắc</th>\n<th>Chi tiết</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td><strong>DOM Recon First</strong></td>\n<td>AI tự mở browser, inspect DOM thật. TUYỆT ĐỐI không đoán locator</td>\n</tr>\n<tr>\n<td>2</td>\n<td><strong>POM Architecture</strong></td>\n<td>Mọi script tuân thủ Page Object Model — phân tách Pages &amp; Tests</td>\n</tr>\n<tr>\n<td>3</td>\n<td><strong>Smart Waits</strong></td>\n<td>Không <code>Thread.sleep</code>, không <code>waitForTimeout</code>. Chỉ auto-waiting</td>\n</tr>\n<tr>\n<td>4</td>\n<td><strong>Deterministic Data</strong></td>\n<td>Test data unique + traceable, không hardcode</td>\n</tr>\n<tr>\n<td>5</td>\n<td><strong>Self-fix Loop</strong></td>\n<td>AI tự chạy → fail → đọc log → sửa → chạy lại → đến khi PASS</td>\n</tr>\n</tbody>\n</table>",
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "thead",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "th",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "#"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "th",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Nguyên tắc"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "th",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Chi tiết"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "tbody",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "DOM Recon First"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "AI tự mở browser, inspect DOM thật. TUYỆT ĐỐI không đoán locator"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "POM Architecture"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Mọi script tuân thủ Page Object Model — phân tách Pages & Tests"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "3"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Smart Waits"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Không "
+                      },
+                      {
+                        "type": "element",
+                        "tag": "code",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Thread.sleep"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": ", không "
+                      },
+                      {
+                        "type": "element",
+                        "tag": "code",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "waitForTimeout"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": ". Chỉ auto-waiting"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "4"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Deterministic Data"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Test data unique + traceable, không hardcode"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "5"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Self-fix Loop"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "AI tự chạy → fail → đọc log → sửa → chạy lại → đến khi PASS"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 25
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 26
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Mô-hình-6-Bước-_68"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Mô hình 6 Bước"
+          }
+        ],
+        "order": 27
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png",
+                  "alt": "",
+                  "width": "553",
+                  "height": "1071"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "order": 28
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 29
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "🎯 Quy trình vận hành Plan Automation"
+          }
+        ],
+        "order": 30
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Xem tại Repo"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/automation"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/automation"
+              }
+            ]
+          }
+        ],
+        "order": 31
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 32
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 33
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "attributes": {
+          "id": "--So-Sánh-Hai-Trụ-Cột_115"
+        },
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "🔄 So Sánh Hai Trụ Cột"
+          }
+        ],
+        "order": 34
+      },
+      {
+        "type": "table",
+        "tag": "table",
+        "attributes": {
+          "class": [
+            "rt-table"
+          ]
+        },
+        "html": "<table class=\"rt-table\">\n<thead>\n<tr>\n<th>Tiêu chí</th>\n<th>Manual (AI-RBT)</th>\n<th>Automation (AI-Driven)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Mục tiêu</strong></td>\n<td>Sinh Test Cases chất lượng cao</td>\n<td>Sinh Test Scripts chạy được</td>\n</tr>\n<tr>\n<td><strong>Mức tự động</strong></td>\n<td>Tuần tự, nhiều Human Checkpoint</td>\n<td>Có thể One-Click tự động 100%</td>\n</tr>\n<tr>\n<td><strong>Vai trò AI</strong></td>\n<td>Phân tích + Sinh nội dung</td>\n<td>Inspect DOM + Viết code + Tự sửa</td>\n</tr>\n<tr>\n<td><strong>Vai trò Human</strong></td>\n<td>Chiến lược, quyết định, review</td>\n<td>Review kiến trúc POM, nhận code final</td>\n</tr>\n<tr>\n<td><strong>Điểm nghẽn</strong></td>\n<td>Bước 2 (Q&amp;A) &amp; Bước 4 (RBT)</td>\n<td>Bước 2 (UI Recon) — cần browser thật</td>\n</tr>\n<tr>\n<td><strong>Đầu ra</strong></td>\n<td>Bảng Markdown → Jira/Excel</td>\n<td>Source code chạy PASS → Git commit</td>\n</tr>\n<tr>\n<td><strong>Số bước</strong></td>\n<td>6 bước</td>\n<td>6 bước (+ bước setup Project)</td>\n</tr>\n<tr>\n<td><strong>Anti-hallucination</strong></td>\n<td>Chia nhỏ module, Q&amp;A từng bước</td>\n<td>DOM Recon thật, Self-fix loop</td>\n</tr>\n</tbody>\n</table>",
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "thead",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "th",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Tiêu chí"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "th",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Manual (AI-RBT)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "th",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Automation (AI-Driven)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "tbody",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Mục tiêu"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Sinh Test Cases chất lượng cao"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Sinh Test Scripts chạy được"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Mức tự động"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Tuần tự, nhiều Human Checkpoint"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Có thể One-Click tự động 100%"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Vai trò AI"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Phân tích + Sinh nội dung"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Inspect DOM + Viết code + Tự sửa"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Vai trò Human"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Chiến lược, quyết định, review"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Review kiến trúc POM, nhận code final"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Điểm nghẽn"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Bước 2 (Q&A) & Bước 4 (RBT)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Bước 2 (UI Recon) — cần browser thật"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Đầu ra"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Bảng Markdown → Jira/Excel"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Source code chạy PASS → Git commit"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Số bước"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "6 bước"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "6 bước (+ bước setup Project)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "tr",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Anti-hallucination"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Chia nhỏ module, Q&A từng bước"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "td",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "DOM Recon thật, Self-fix loop"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 35
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 36
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "attributes": {
+          "id": "--Triết-Lý-Thiết-Kế--Human-AI-Collaboration_128"
+        },
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "🧠 Triết Lý Thiết Kế: Human-AI Collaboration"
+          }
+        ],
+        "order": 37
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Tại-sao-Manual-Testing-PHẢI-chạy-tuần-tự-_129"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Tại sao Manual Testing PHẢI chạy tuần tự?"
+          }
+        ],
+        "order": 38
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Có 3 lý do cốt lõi:"
+              }
+            ]
+          }
+        ],
+        "order": 39
+      },
+      {
+        "type": "list",
+        "tag": "ol",
+        "ordered": true,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Điểm nghẽn ở Bước 2 (Analysis & Q&A):"
+                  }
+                ]
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "AI cần thời gian phân tích và đưa ra câu hỏi. Nếu chạy 1 lèo → AI tự đoán mò logic → Test Case sai trầm trọng."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Điểm chốt chặn nhân sự (Human in the Loop):"
+                  }
+                ]
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "Ở Bước 4 và 5, Tester phải tự đánh giá rủi ro trước khi cho AI sinh kịch bản chi tiết."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Chống Ảo giác (Anti-Hallucination):"
+                  }
+                ]
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "Nạp 1 tài liệu dài + bắt AI nhả ra hàng trăm kịch bản cùng lúc → AI mất tập trung, bỏ sót luồng. "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Xé nhỏ ra từng prompt"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " mang lại chất lượng tuyệt đối."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 40
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Tại-sao-Automation-Testing-CÓ-THỂ-chạy-One-Click-_134"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Tại sao Automation Testing CÓ THỂ chạy One-Click?"
+          }
+        ],
+        "order": 41
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Vì AI có thể "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "tự kiểm chứng"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " kết quả:"
+          }
+        ],
+        "order": 42
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Locator sai? → DOM Recon phát hiện ngay"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Code lỗi? → Chạy test → đọc log → sửa → chạy lại"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Không cần human judgment để verify code chạy đúng hay sai"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 43
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 44
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "attributes": {
+          "id": "--10-Mẹo-Tối-Ưu-Khi-Áp-Dụng_138"
+        },
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "💡 10 Mẹo Tối Ưu Khi Áp Dụng"
+          }
+        ],
+        "order": 45
+      },
+      {
+        "type": "list",
+        "tag": "ol",
+        "ordered": true,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Luôn chạy trong cùng 1 conversation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — AI giữ context xuyên suốt"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Bước 2 là quan trọng nhất"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " cho Manual — đừng vội, trả lời kỹ"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Chia module khi >5"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — tránh AI bị quá tải thông tin"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Review trước khi format"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — kiểm test cases ở Bước 5 trước khi sang Bước 6"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Cung cấp tài khoản test"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — Automation cần login thật để inspect DOM"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Không hardcode data"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — luôn dùng format traceable"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Không hard sleep"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — chỉ smart waits / auto-waiting"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Clean code trước commit"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — Bước 6 là bắt buộc, không bỏ qua"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Kết hợp hai trụ cột"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — Sinh manual TC trước → chuyển sang automation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Đo lường kết quả"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — So sánh coverage trước/sau khi dùng AI"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 46
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 47
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "attributes": {
+          "id": "---Lộ-Trình-Triển-Khai-Thực-Tế_141"
+        },
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "🗺️ Lộ Trình Triển Khai Thực Tế"
+          }
+        ],
+        "order": 48
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Tuần-1-2--Thiết-lập-nền-tảng_142"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Tuần 1-2: Thiết lập nền tảng"
+          }
+        ],
+        "order": 49
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Clone "
+              },
+              {
+                "type": "link",
+                "tag": "a",
+                "attributes": {
+                  "href": "https://github.com/anhtester/antigravity-testing-kit"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Antigravity Testing Kit"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Copy thư mục "
+              },
+              {
+                "type": "element",
+                "tag": "code",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": ".agent/"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " vào project của bạn"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Đọc hiểu Plans (Manual + Automation)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Chạy thử 1 flow Manual Testing đơn giản"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 50
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Tuần-3-4--Áp-dụng-Manual-AI-RBT_144"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Tuần 3-4: Áp dụng Manual AI-RBT"
+          }
+        ],
+        "order": 51
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Chọn 1 tính năng thực tế trong dự án"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Chạy đủ 6 bước AI-RBT tuần tự"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " So sánh kết quả với test cases viết tay trước đó"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Đánh giá: Coverage mới vs. Coverage cũ"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 52
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Tuần-5-6--Áp-dụng-Automation-AI-Driven_146"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Tuần 5-6: Áp dụng Automation AI-Driven"
+          }
+        ],
+        "order": 53
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Setup kiến trúc project (Bước chuẩn bị)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Chạy One-Click cho 1 flow đơn giản (Login)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Mở rộng sang flow phức tạp hơn"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Tích hợp CI/CD pipeline"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 54
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "attributes": {
+          "id": "Tuần-7---Scale---Optimize_148"
+        },
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "Tuần 7+: Scale & Optimize"
+          }
+        ],
+        "order": 55
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Training team sử dụng Plans"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Tùy chỉnh Rules/Skills cho dự án cụ thể (cái này cần thiết)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Tích hợp Jira/Xray để đồng bộ test management"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "vditor-task"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": " Xuất Test Cases sang Excel/Google Sheets tự động"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 56
+      }
+    ]
+  },
+  "json_path": "chapters/chapter-01/lesson-005.json",
+  "markdown_path": "chapters/chapter-01/lesson-005.md",
+  "exported_at": "2026-11-19T12:54:21.577833+07:00",
+  "short_description_html": "<h4><strong>🎥 Video Record phần 1: <a href=\"https://www.youtube.com/watch?v=n7kNsbVEOEw\">https://www.youtube.com/watch?v=n7kNsbVEOEw</a><br></strong></h4>\n<h4><strong>🎥 Video Record phần 2: <a href=\"https://www.youtube.com/watch?v=aAk0APkv2LI\">https://www.youtube.com/watch?v=aAk0APkv2LI</a></strong></h4>\n<p><br>Xây dựng một&nbsp;kế hoạch ứng dụng AI có hệ thống&nbsp;— <strong>biến AI từ \"công cụ phụ trợ\" thành&nbsp;đồng đội trong quy trình</strong>, có đầu vào rõ ràng, checkpoint kiểm soát, và đầu ra đo lường được.<strong><br><br>Plans (Kế hoạch)</strong> là xây dựng quy trình, tổ chức cho AI làm việc cả một quy trình hoàn thiện trong việc Kiểm thử phần mềm.<br><br>Nếu bạn đã có:</p>\n<ul>\n<li><strong>SKILL</strong> → AI biết <em>làm gì</em></li>\n<li><strong>WORKFLOW</strong> → AI biết <em>làm theo trình tự</em></li>\n<li><strong>RULE</strong> → AI biết <em>giới hạn &amp; tiêu chuẩn</em></li>\n</ul>\n<p><br>👉 Thì <strong>PLAN</strong> sẽ trả lời:</p>\n<blockquote>\n<p>“Áp dụng AI vào toàn bộ quy trình Testing như thế nào?”</p>\n</blockquote>",
+  "intro": {
+    "html": "\n                                                    <div class=\"ratio ratio-16x9\">\n                                <iframe src=\"https://www.youtube.com/embed/n7kNsbVEOEw\" title=\"[AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)\" allowfullscreen=\"\" frameborder=\"0\"></iframe>\n                            </div>\n                                                <div class=\"card-body\">\n                            \n                                                        \n                                                            <p class=\"text-muted fs-14 mb-0\">\n                                    <i class=\"isax isax-video-circle me-1\"></i>\n                                     5 giờ 27 phút (2 phần)                                                                     </p>\n                                                        <div class=\"mb-0 mt-4 lesson-short-desc\"><h4><strong>🎥 Video Record phần 1: <a href=\"https://www.youtube.com/watch?v=n7kNsbVEOEw\">https://www.youtube.com/watch?v=n7kNsbVEOEw</a><br></strong></h4>\n<h4><strong>🎥 Video Record phần 2: <a href=\"https://www.youtube.com/watch?v=aAk0APkv2LI\">https://www.youtube.com/watch?v=aAk0APkv2LI</a></strong></h4>\n<p><br>Xây dựng một&nbsp;kế hoạch ứng dụng AI có hệ thống&nbsp;— <strong>biến AI từ \"công cụ phụ trợ\" thành&nbsp;đồng đội trong quy trình</strong>, có đầu vào rõ ràng, checkpoint kiểm soát, và đầu ra đo lường được.<strong><br><br>Plans (Kế hoạch)</strong> là xây dựng quy trình, tổ chức cho AI làm việc cả một quy trình hoàn thiện trong việc Kiểm thử phần mềm.<br><br>Nếu bạn đã có:</p>\n<ul>\n<li><strong>SKILL</strong> → AI biết <em>làm gì</em></li>\n<li><strong>WORKFLOW</strong> → AI biết <em>làm theo trình tự</em></li>\n<li><strong>RULE</strong> → AI biết <em>giới hạn &amp; tiêu chuẩn</em></li>\n</ul>\n<p><br>👉 Thì <strong>PLAN</strong> sẽ trả lời:</p>\n<blockquote>\n<p>“Áp dụng AI vào toàn bộ quy trình Testing như thế nào?”</p>\n</blockquote></div>                        </div>\n                    ",
+    "blocks": [
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "ratio",
+            "ratio-16x9"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "embed",
+            "tag": "iframe",
+            "attributes": {
+              "src": "https://www.youtube.com/embed/n7kNsbVEOEw",
+              "title": "[AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+              "allowfullscreen": "",
+              "frameborder": "0"
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 1
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "card-body"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "attributes": {
+              "class": [
+                "text-muted",
+                "fs-14",
+                "mb-0"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "i",
+                "attributes": {
+                  "class": [
+                    "isax",
+                    "isax-video-circle",
+                    "me-1"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "\n                                     5 giờ 27 phút (2 phần)                                                                     "
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "mb-0",
+                "mt-4",
+                "lesson-short-desc"
+              ]
+            },
+            "children": [
+              {
+                "type": "heading",
+                "tag": "h4",
+                "level": 4,
+                "children": [
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "🎥 Video Record phần 1: "
+                      },
+                      {
+                        "type": "link",
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://www.youtube.com/watch?v=n7kNsbVEOEw"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "https://www.youtube.com/watch?v=n7kNsbVEOEw"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "heading",
+                "tag": "h4",
+                "level": 4,
+                "children": [
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "🎥 Video Record phần 2: "
+                      },
+                      {
+                        "type": "link",
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://www.youtube.com/watch?v=aAk0APkv2LI"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "https://www.youtube.com/watch?v=aAk0APkv2LI"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Xây dựng một kế hoạch ứng dụng AI có hệ thống — "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "biến AI từ \"công cụ phụ trợ\" thành đồng đội trong quy trình"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ", có đầu vào rõ ràng, checkpoint kiểm soát, và đầu ra đo lường được."
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      },
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      },
+                      {
+                        "type": "text",
+                        "text": "Plans (Kế hoạch)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " là xây dựng quy trình, tổ chức cho AI làm việc cả một quy trình hoàn thiện trong việc Kiểm thử phần mềm."
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Nếu bạn đã có:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "list",
+                "tag": "ul",
+                "ordered": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "SKILL"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " → AI biết "
+                      },
+                      {
+                        "type": "element",
+                        "tag": "em",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "làm gì"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "WORKFLOW"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " → AI biết "
+                      },
+                      {
+                        "type": "element",
+                        "tag": "em",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "làm theo trình tự"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "RULE"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " → AI biết "
+                      },
+                      {
+                        "type": "element",
+                        "tag": "em",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "giới hạn & tiêu chuẩn"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "👉 Thì "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "PLAN"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " sẽ trả lời:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "blockquote",
+                "tag": "blockquote",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "paragraph",
+                    "tag": "p",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "“Áp dụng AI vào toàn bộ quy trình Testing như thế nào?”"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 2
+      }
+    ]
+  },
+  "images": [
+    {
+      "order": 1,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png",
+        "category": "image",
+        "path": "assets/c1eec1f821627f87edd2.png",
+        "status": "downloaded",
+        "bytes": 43616,
+        "sha256": "564c4caf6266657e5694f8dfcd534406494b390e8587ea438a8e904db5896a4b",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 2,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png",
+        "category": "image",
+        "path": "assets/2c1f500b95a94397f9d2.png",
+        "status": "downloaded",
+        "bytes": 31539,
+        "sha256": "64e21bf6d5555c6f747746aacc327ec28b622dd6f3b3745e06cd3e417e3e0dfa",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 3,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png",
+        "category": "image",
+        "path": "assets/3403e9b0df7085a39948.png",
+        "status": "downloaded",
+        "bytes": 77203,
+        "sha256": "04dc5e3f9b429de9c45ffe0e09b7b39d275afbeaacc25719e24566ebf8d14c87",
+        "content_type": "image/png"
+      }
+    }
+  ],
+  "media": [
+    {
+      "order": 1,
+      "type": "iframe",
+      "url": "https://www.youtube.com/embed/n7kNsbVEOEw",
+      "title": "[AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "poster": "",
+      "position": "before_lesson_content",
+      "download_offered": false
+    },
+    {
+      "order": 2,
+      "type": "a",
+      "url": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+      "title": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+      "poster": "",
+      "position": "before_lesson_content",
+      "download_offered": false
+    },
+    {
+      "order": 3,
+      "type": "a",
+      "url": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "title": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "poster": "",
+      "position": "before_lesson_content",
+      "download_offered": false
+    }
+  ],
+  "links": [
+    {
+      "order": 1,
+      "text": "Antigravity Testing Kit",
+      "url": "https://github.com/anhtester/antigravity-testing-kit",
+      "download": false
+    },
+    {
+      "order": 2,
+      "text": "https://github.com/anhtester/antigravity-testing-kit",
+      "url": "https://github.com/anhtester/antigravity-testing-kit",
+      "download": false
+    },
+    {
+      "order": 3,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png",
+      "download": false
+    },
+    {
+      "order": 4,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png",
+      "download": false
+    },
+    {
+      "order": 5,
+      "text": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/manual",
+      "url": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/manual",
+      "download": false
+    },
+    {
+      "order": 6,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png",
+      "download": false
+    },
+    {
+      "order": 7,
+      "text": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/automation",
+      "url": "https://github.com/anhtester/antigravity-testing-kit/tree/main/plans/automation",
+      "download": false
+    },
+    {
+      "order": 8,
+      "text": "Antigravity Testing Kit",
+      "url": "https://github.com/anhtester/antigravity-testing-kit",
+      "download": false
+    }
+  ],
+  "videos": [
+    {
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/n7kNsbVEOEw",
+      "title": "[AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/n7kNsbVEOEw",
+          "title": "[AI Test Automation] Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        },
+        {
+          "order": 2,
+          "type": "a",
+          "url": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+          "title": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "n7kNsbVEOEw",
+      "watch_url": "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 5 - Phần 1 - Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "thumbnail_url": "https://i.ytimg.com/vi/n7kNsbVEOEw/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    },
+    {
+      "order": 2,
+      "source_url": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "title": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "references": [
+        {
+          "order": 3,
+          "type": "a",
+          "url": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+          "title": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "aAk0APkv2LI",
+      "watch_url": "https://www.youtube.com/watch?v=aAk0APkv2LI",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 5 - Phần 2 - Xây dựng kế hoạch ứng dụng AI toàn diện (Plans)",
+      "thumbnail_url": "https://i.ytimg.com/vi/aAk0APkv2LI/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    }
+  ],
+  "media_audit": {
+    "declared_media_references": 3,
+    "declared_urls": [
+      "https://www.youtube.com/embed/n7kNsbVEOEw",
+      "https://www.youtube.com/watch?v=n7kNsbVEOEw",
+      "https://www.youtube.com/watch?v=aAk0APkv2LI"
+    ],
+    "intro_iframe_count": 1
+  },
+  "assignment_link": null,
+  "assets": [
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/plan_manual_va_automation_anhtester.png",
+      "category": "image",
+      "path": "assets/c1eec1f821627f87edd2.png",
+      "status": "downloaded",
+      "bytes": 43616,
+      "sha256": "564c4caf6266657e5694f8dfcd534406494b390e8587ea438a8e904db5896a4b",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/manual_plan_6_steps.png",
+      "category": "image",
+      "path": "assets/2c1f500b95a94397f9d2.png",
+      "status": "downloaded",
+      "bytes": 31539,
+      "sha256": "64e21bf6d5555c6f747746aacc327ec28b622dd6f3b3745e06cd3e417e3e0dfa",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai5_plans/automation_plan_6_steps.png",
+      "category": "image",
+      "path": "assets/3403e9b0df7085a39948.png",
+      "status": "downloaded",
+      "bytes": 77203,
+      "sha256": "04dc5e3f9b429de9c45ffe0e09b7b39d275afbeaacc25719e24566ebf8d14c87",
+      "content_type": "image/png"
+    }
+  ],
+  "quality": {
+    "checked_at": "2026-11-19T12:54:20.140749+07:00",
+    "passed": true,
+    "checks": {
+      "code_exact_html": true,
+      "code_exact_json": true,
+      "code_markdown_whitespace": true,
+      "headings_exact": true,
+      "table_count_matches": true,
+      "image_count_matches": true,
+      "paragraph_count_matches": true,
+      "list_count_matches": true,
+      "blockquote_count_matches": true,
+      "all_cleaned_text_preserved": true,
+      "content_nonempty": true,
+      "no_form_or_script": true
+    },
+    "heading_count": 25,
+    "code_block_count": 1,
+    "table_count": 2,
+    "image_count": 3,
+    "code_sha256": [
+      "ca891ae99a87c90c2a8ab718fe3db39bf136370278e1223357ec5b414ee3903f"
+    ],
+    "content_text_sha256": "04147455a651acc8fad8d9f31c4d6582990938002c49787031aa05899db67da2",
+    "note": "JSON/HTML preserve code exactly. Markdown adds the required final line ending before a closing fence when absent in the source."
+  },
+  "assignment": null,
+  "redacted_url_parameter_count": 0,
+  "content_kind": "lesson_article"
+}

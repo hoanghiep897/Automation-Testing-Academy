@@ -1,0 +1,5482 @@
+{
+  "order": 2,
+  "source_id": "284",
+  "chapter_order": 1,
+  "chapter_title": "1. Nội dung khoá học",
+  "title": "Bài 2 - [AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+  "url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/284",
+  "duration": "3 giờ 12 phút",
+  "export_scope": "full_lesson_content",
+  "content_status": "exported",
+  "content": {
+    "html": "<h2>🧠 1. Google Antigravity là gì?</h2>\n<p><strong>Google Antigravity</strong> là một nền tảng AI mới của Google dùng để xây dựng <strong>AI Agents có khả năng thao tác trên ứng dụng giống như con người</strong>.<br><br>Điều này mở ra một hướng mới dành cho <strong>Tester</strong> hỗ trợ công việc kiểm thử <strong>Manual</strong> và <strong>Test Automation</strong>.<br><br>Thay vì:</p>\n<div class=\"contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary\">\n<div class=\"overflow-y-auto p-4\"><code class=\"whitespace-pre!\">Tester viết test cases → viết script\n→ Selenium / Playwright chạ<span class=\"hljs-attribute\">y</span>\n→ Kiểm tra kết quả</code></div>\n</div>\n<p>Thì bây giờ chúng ta có thể làm theo cách mới:</p>\n<div class=\"contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary\">\n<div class=\"overflow-y-auto p-4\"><code class=\"whitespace-pre!\">Tester mô tả hành động\n→ AI Agent hiểu ứng dụng\n→ AI tự thao tác UI\n→ AI sinh <span class=\"hljs-built_in\">test</span> <span class=\"hljs-keyword\">case</span> và Automation script → Xuất báo cáo chi tiết</code></div>\n</div>\n<h3>&nbsp;</h3>\n<h3>📌 Antigravity hỗ trợ rất mạnh cho</h3>\n<ul>\n<li>\n<p>Web Testing (mạnh nhất về Debug cấu trúc DOM với Chromium browser)</p>\n</li>\n<li>\n<p>API Testing</p>\n</li>\n<li>\n<p>Mobile Testing</p>\n</li>\n<li>\n<p>UI Exploration</p>\n</li>\n<li>\n<p>Test Case Generation</p>\n</li>\n<li>\n<p>Automation Script Generation</p>\n</li>\n<li>\n<p>Smart Locator Detection</p>\n</li>\n</ul>\n<br><hr>\n<h2><br>⚡ 2. Vì sao Antigravity cực kỳ phù hợp cho Tester?</h2>\n<p>Một số khả năng khiến <strong>Antigravity</strong> trở thành <strong>game changer cho Test Automation</strong>:</p>\n<h3>🔍 1. AI tự khám phá ứng dụng</h3>\n<p>AI có thể:</p>\n<ul>\n<li>\n<p>Mở trang web</p>\n</li>\n<li>\n<p>Click các element</p>\n</li>\n<li>\n<p>Phân tích UI structure</p>\n</li>\n<li>\n<p>Hiểu flow của application</p>\n</li>\n</ul>\n<p><br>Giống như một <strong>Junior Tester chạy exploratory testing 24/7</strong>.</p>\n<h3>&nbsp;</h3>\n<h3>🧠 2. Hiểu được ngữ nghĩa UI</h3>\n<p>Thay vì locator kiểu cũ:</p>\n<div class=\"contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary\">\n<div class=\"overflow-y-auto p-4\"><code class=\"whitespace-pre! language-xpath\">//div[3]/div[2]/button//button[normalize-space()='Login']</code></div>\n</div>\n<p>AI sẽ hiểu luôn như một con người dùng mắt quan sát:</p>\n<div class=\"contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary\">\n<div class=\"overflow-y-auto p-4\"><code class=\"whitespace-pre!\"><span class=\"hljs-string\">\"Login button\"<br></span><span class=\"hljs-string\">\"Submit order\"<br></span><span class=\"hljs-string\">\"Add to cart\"</span>\n</code></div>\n</div>\n<p><br>Điều này giúp automation <strong>ổn định hơn rất nhiều</strong>. Nhờ vào công nghệ <strong>UI Vision</strong> quan sát và hiểu UI<strong>,</strong>&nbsp;<strong>Debug DOM</strong> trực tiếp và có thể kết hợp với các <strong>MCP Server</strong> như Selenium MCP, Appium MCP, Playwright MCP để điều khiển và sinh script nhanh đúng chuẩn.</p>\n<h3>&nbsp;</h3>\n<h3>⚙️ 3. Sinh Automation Script</h3>\n<p>Antigravity có thể tạo:</p>\n<ul>\n<li>\n<p>Playwright scripts</p>\n</li>\n<li>\n<p>Selenium scripts</p>\n</li>\n<li>\n<p>Test steps</p>\n</li>\n<li>\n<p>Test scenarios</p>\n</li>\n</ul>\n<p><br>Ví dụ yêu cầu bằng ngôn ngữ tự nhiên theo dạng mô tả hoặc từ một test case manual:</p>\n<div class=\"contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary\">\n<div class=\"overflow-y-auto p-4\"><code class=\"whitespace-pre!\">Kiểm tra giúp tôi test case: Login successful<br><br>URL: https://crm.anhtester.com/admin/authentication<br>Email: admin@example.com<br>Password: 123456<br><br>Steps:<br><span class=\"hljs-bullet\">1.</span> Open login page<br><span class=\"hljs-bullet\">2.</span> Enter email<br><span class=\"hljs-bullet\">3.</span> Enter password<br><span class=\"hljs-bullet\">4.</span> Click login<br><span class=\"hljs-bullet\">5.</span> Verify dashboard\n</code></div>\n</div>\n<p><br>Với mô tả trên là Antigravity có thể hiểu được và debug từng bước làm theo yêu cầu đến khi đạt được kết quả cuối cùng và có thể xuất ra script automation luôn để chúng ta chạy lại được.</p>\n<p>&nbsp;</p>\n<h3>🚀 4. Tích hợp AI Workflow</h3>\n<p>Bạn có thể xây dựng workflow kiểu:</p>\n<div class=\"contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary\">\n<div class=\"overflow-y-auto p-4\"><code class=\"whitespace-pre!\"><span class=\"hljs-variable\">Explore</span> <span class=\"hljs-built_in\">Application</span>\n→ <span class=\"hljs-variable\">Generate</span> <span class=\"hljs-variable\">Test</span> <span class=\"hljs-built_in\">Cases</span>\n→ <span class=\"hljs-variable\">Generate</span> <span class=\"hljs-variable\">Automation</span>\n→ <span class=\"hljs-variable\">Execute</span> <span class=\"hljs-variable\">Tests</span>\n</code></div>\n</div>\n<p>Đây chính là nền tảng của <strong>Agentic AI Testing</strong>.</p>\n<p>&nbsp;</p>\n<h3>🔆 Demo sử dụng Antigravity thực hiện kiểm thử từ mô tả trên</h3>\n<p><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png\" alt=\"\" width=\"2560\" height=\"1380\"></a><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png\" alt=\"\" width=\"2560\" height=\"1380\"></a><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png\" alt=\"\" width=\"2560\" height=\"1380\"></a><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png\" alt=\"\" width=\"2560\" height=\"1380\"></a><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png\" alt=\"\" width=\"2560\" height=\"1440\"></a><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png\" alt=\"\" width=\"2560\" height=\"1380\"></a></p>\n<h2><br><br>🧰 3. Yêu cầu trước khi cài Antigravity</h2>\n<p>Trước khi bắt đầu, bạn nên chuẩn bị:</p>\n<h3>💻 Máy tính</h3>\n<p>Khuyến nghị:</p>\n<ul>\n<li>\n<p>RAM: <strong>16GB</strong></p>\n</li>\n<li>\n<p>Cài sẵn Chrome / Edge mới nhất</p>\n</li>\n</ul>\n<h3>&nbsp;</h3>\n<h3>🧠 Tài khoản Google AI</h3>\n<p>Bạn cần một tài khoản có quyền truy cập <strong>Google AI Plan</strong> như gói <strong>Pro</strong> và <strong>Ultra</strong> để sử dụng thoải mái hơn.<br><br>Hoặc bạn cũng có thể mua Credits rời nhưng sẽ hơi tốn kém hơn so với mua dạng gói.<br><br>Các bạn cần chuẩn bị account Google AI Pro hoặc Ultra thì mới dùng được Antigravity nhé.<br class=\"html-br\"><br class=\"html-br\"><span class=\"html-span xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x1hl2dhg x16tdsg8 x1vvkbs\"><a class=\"x1i10hfl xjbqb8w x1ejq31n x18oe1m7 x1sy0etr xstzfhl x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk xt0psk2 x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xkrqix3 x1sur9pj x1fey0fg x1s688f\" href=\"https://one.google.com/about/google-ai-plans/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExbUVkb1hheEkwUmd0QVhoWHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5O1gHOOxnswYgdtdjxNf3Xo4A21SH48od-B4HivHGGj5j87jXjtt1dOteTbQ_aem_ZmFrZWR1bW15MTZieXRlcw\">https://one.google.com/about/google-ai-plans/</a></span><br class=\"html-br\"><span class=\"html-span xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x1hl2dhg x16tdsg8 x1vvkbs\"><a class=\"x1i10hfl xjbqb8w x1ejq31n x18oe1m7 x1sy0etr xstzfhl x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk xt0psk2 x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xkrqix3 x1sur9pj x1fey0fg x1s688f\" href=\"https://antigravity.google/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExbUVkb1hheEkwUmd0QVhoWHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4qJSFTS48ezaS1S1QGYhPj3PAKoDJ8HADjf9eFlLHXPODwh-KGUa3T6UzB4Q_aem_vCX0J99aBFAU4cHrm-37bg\">https://antigravity.google/</a></span><br class=\"html-br\"><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg\" alt=\"\" width=\"2048\" height=\"1272\"></a><br><br class=\"html-br\"><strong>Góp ý</strong>: Các bạn mới học hoặc đang trong giai đoạn học ngâm cứu Antigravity thì nên mua gói Ultra dạng được add vào Family từ các bên ngoài bán để học cho rẻ, tầm 300k 350k 400k gì đó cho 1 tháng. (nếu cần thì nhắn mình trong nhóm Telegram mình share cho vài chỗ người bán uy tín)<br class=\"html-br\"><br>Gói Pro thì cũng được nhưng sợ đang ngâm cứu thì hết token 😂<br>(giá thì hiện tại gói Pro mình thấy nhiều người bán 99k 100k)<br><br><br></p>\n<h2>⚙️4. Cài đặt Antigravity</h2>\n<p><span class=\"ng-star-inserted\">Dưới đây là hướng dẫn chi tiết các bước cài đặt và thiết lập </span><strong class=\"ng-star-inserted\">Google Antigravity:<br><br></strong></p>\n<h4 class=\"paragraph is-rich-chat-ui heading3 ng-star-inserted\"><span class=\"ng-star-inserted\">🟡 1. Tải xuống và Cài đặt</span></h4>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><span class=\"ng-star-inserted\">Truy cập trang chủ: <a href=\"https://antigravity.google/download\">https://antigravity.google/download</a></span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><span class=\"ng-star-inserted\">Chọn phiên bản phù hợp với thiết bị của bạn:</span>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Windows:</strong><span class=\"ng-star-inserted\"> Tải tệp </span><code class=\"code ng-star-inserted\">.exe</code><span class=\"ng-star-inserted\">. Khuyến nghị cài đặt trên </span><strong class=\"ng-star-inserted\">ổ C:</strong><span class=\"ng-star-inserted\"> để tránh các lỗi phân quyền hoặc lỗi đăng nhập.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">macOS:</strong><span class=\"ng-star-inserted\"> Tải tệp </span><code class=\"code ng-star-inserted\">.dmg</code><span class=\"ng-star-inserted\">, kéo biểu tượng vào thư mục </span><strong class=\"ng-star-inserted\">Applications</strong><span class=\"ng-star-inserted\">.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Linux:</strong><span class=\"ng-star-inserted\"> Tải gói </span><code class=\"code ng-star-inserted\">.deb</code><span class=\"ng-star-inserted\"> hoặc </span><code class=\"code ng-star-inserted\">.rpm</code><span class=\"ng-star-inserted\"> và cài đặt qua terminal.</span></li>\n</ul>\n</li>\n</ul>\n<h4 class=\"paragraph is-rich-chat-ui heading3 ng-star-inserted\"><span class=\"ng-star-inserted\"><br>🟡 2. Thiết lập Ban đầu (Initial Setup)</span></h4>\n<div class=\"paragraph is-rich-chat-ui normal ng-star-inserted\"><span class=\"ng-star-inserted\">Khi khởi chạy ứng dụng lần đầu, hệ thống sẽ dẫn bạn qua các bước cấu hình:</span></div>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Chọn luồng thiết lập (Setup flow):</strong><span class=\"ng-star-inserted\"> Chọn </span><strong class=\"ng-star-inserted\">\"Start Fresh\"</strong><span class=\"ng-star-inserted\"> nếu bạn muốn bắt đầu mới, hoặc </span><strong class=\"ng-star-inserted\">\"Import from Cursor/VS Code\"</strong><span class=\"ng-star-inserted\"> để nhập lại các cấu hình và tiện ích cũ.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Chọn giao diện (Theme):</strong><span class=\"ng-star-inserted\"> Lựa chọn giữa chế độ Tối (Dark), Sáng (Light) hoặc Độ tương phản cao.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Cài đặt Tiện ích mở rộng:</strong><span class=\"ng-star-inserted\"> Đồng ý cài đặt các </span><strong class=\"ng-star-inserted\">Recommended Extensions</strong><span class=\"ng-star-inserted\"> (thường là các plugin ngôn ngữ và hỗ trợ AI) để tối ưu hóa khả năng của tác nhân.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Đăng nhập:</strong><span class=\"ng-star-inserted\"> Nhấn \"Sign in with Google\" và hoàn tất đăng nhập trên trình duyệt web, sau đó đồng ý với các </span><strong class=\"ng-star-inserted\">Điều khoản sử dụng</strong><span class=\"ng-star-inserted\">.</span></li>\n</ul>\n<h4 class=\"paragraph is-rich-chat-ui heading3 ng-star-inserted\"><span class=\"ng-star-inserted\"><br>🟡 3. Cấu hình Chính sách Thực thi (Agent Policies)</span></h4>\n<div class=\"paragraph is-rich-chat-ui normal ng-star-inserted\"><span class=\"ng-star-inserted\">Đây là phần quan trọng nhất để kiểm soát quyền hạn của AI:</span></div>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Terminal Execution Policy (Chạy lệnh Terminal):</strong>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Turbo:</strong><span class=\"ng-star-inserted\"> AI tự động chạy mọi lệnh.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Auto (Khuyến nghị):</strong><span class=\"ng-star-inserted\"> AI tự chạy lệnh an toàn và xin phép với lệnh nhạy cảm.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Off:</strong><span class=\"ng-star-inserted\"> AI phải hỏi ý kiến bạn trước mỗi lệnh.</span></li>\n</ul>\n</li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Review Policy (Duyệt kế hoạch và Mã nguồn):</strong>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Always Proceed:</strong><span class=\"ng-star-inserted\"> AI tự làm việc không dừng.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Agent Decides:</strong><span class=\"ng-star-inserted\"> AI tự quyết khi nào cần bạn duyệt.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Request Review:</strong><span class=\"ng-star-inserted\"> Bạn phải duyệt qua mọi kế hoạch và tệp tin AI tạo ra trước khi nó tiếp tục.</span></li>\n</ul>\n</li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Gợi ý:</strong><span class=\"ng-star-inserted\"> Nếu là người mới, bạn nên chọn cấu hình sẵn là </span><strong class=\"ng-star-inserted\">\"Agent-assisted development\"</strong><span class=\"ng-star-inserted\"> để có sự cân bằng giữa tốc độ và sự kiểm soát.</span></li>\n</ul>\n<h4 class=\"paragraph is-rich-chat-ui heading3 ng-star-inserted\"><span class=\"ng-star-inserted\"><br>🟡 4. Thiết lập Tính năng Nâng cao</span></h4>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Browser Mode (Chế độ Trình duyệt):</strong><span class=\"ng-star-inserted\"> Nhấn vào nút \"Browser\" ở góc dưới bên trái giao diện. Bạn sẽ được hướng dẫn cài đặt </span><strong class=\"ng-star-inserted\">Chrome extension</strong><span class=\"ng-star-inserted\">. Tính năng này cho phép AI tự động mở trình duyệt để kiểm thử giao diện (UI) và thực hiện các tác vụ web.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Rules (Quy tắc dự án):</strong><span class=\"ng-star-inserted\"> Bạn có thể tạo tệp </span><strong class=\"ng-star-inserted\">.antigravity/rules.md</strong><span class=\"ng-star-inserted\"> trong thư mục dự án. AI sẽ tự động đọc tệp này để tuân thủ các tiêu chuẩn code, cách đặt tên hoặc định dạng tài liệu của riêng bạn.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Workflows (Quy trình làm việc):</strong><span class=\"ng-star-inserted\"> Định nghĩa các tác vụ lặp lại trong thư mục </span><strong class=\"ng-star-inserted\">.agent/workflows/</strong><span class=\"ng-star-inserted\"> và kích hoạt chúng bằng lệnh </span><strong class=\"ng-star-inserted\">/</strong><span class=\"ng-star-inserted\"> trong khung chat.</span></li>\n</ul>\n<h4 class=\"paragraph is-rich-chat-ui heading3 ng-star-inserted\"><span class=\"ng-star-inserted\"><br>🟡 5. Cách vận hành cơ bản</span></h4>\n<ul class=\"ng-star-inserted\">\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Mở dự án:</strong><span class=\"ng-star-inserted\"> Sử dụng </span><strong class=\"ng-star-inserted\">Open Folder</strong><span class=\"ng-star-inserted\"> để trỏ đến thư mục mã nguồn trên máy.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Agent Manager:</strong><span class=\"ng-star-inserted\"> Sử dụng phím tắt </span><strong class=\"ng-star-inserted\">Ctrl + E</strong><span class=\"ng-star-inserted\"> (hoặc Cmd + E) để mở bảng quản lý. Tại đây bạn có thể chạy nhiều tác nhân AI song song cho các nhiệm vụ khác nhau.</span></li>\n<li class=\"paragraph list-item is-rich-chat-ui normal ng-star-inserted\"><strong class=\"ng-star-inserted\">Tương tác:</strong><span class=\"ng-star-inserted\"> Nhập yêu cầu bằng ngôn ngữ tự nhiên. AI sẽ xuất ra các </span><strong class=\"ng-star-inserted\">Artifacts</strong><span class=\"ng-star-inserted\"> (tạo tác) như bản kế hoạch, danh sách công việc hoặc video quay màn hình kiểm thử để bạn theo dõi và phê duyệt.</span></li>\n</ul>\n<p>&nbsp;</p>\n<h2><br>📗5. Sử dụng Antigravity</h2>\n<h3>🎯 Mục tiêu đạt được cơ bản</h3>\n<ul>\n<li>🧠 Thiết lập <strong>Browser Agent</strong></li>\n<li>⚙️ Quản lý <strong>Agent Manager</strong></li>\n<li>📎 Đính kèm <strong>file / media</strong></li>\n<li><strong>🧩 </strong>Dùng <strong>Prompt</strong> để giao tiếp với AI Agent</li>\n</ul>\n<br>\n<p><strong>Antigravity</strong> xoay quanh 1 thứ duy nhất:</p>\n<blockquote class=\"rt-quote\">\n<p>👉 <strong>AI Agent</strong></p>\n</blockquote>\n<p>Bạn không viết code, bạn chỉ cần <strong>ra lệnh cho AI</strong>.</p>\n<h3><br>🧩 Flow hoạt động</h3>\n<pre class=\"line-numbers language-markdown\"><code class=\"language-markdown\">Bạn nhập prompt\n↓\nAI hiểu yêu cầu\n↓\nAI mở browser (nếu cần)\n↓\nAI thao tác UI (nếu cần)\n↓\nAI trả kết quả (test case / script / report)</code></pre>",
+    "blocks": [
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "🧠 1. Google Antigravity là gì?"
+          }
+        ],
+        "order": 1
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Google Antigravity"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " là một nền tảng AI mới của Google dùng để xây dựng "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "AI Agents có khả năng thao tác trên ứng dụng giống như con người"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Điều này mở ra một hướng mới dành cho "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Tester"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " hỗ trợ công việc kiểm thử "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Manual"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " và "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Test Automation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Thay vì:"
+          }
+        ],
+        "order": 2
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "contain-inline-size",
+            "rounded-2xl",
+            "corner-superellipse/1.1",
+            "relative",
+            "bg-token-sidebar-surface-primary"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "overflow-y-auto",
+                "p-4"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "code",
+                "attributes": {
+                  "class": [
+                    "whitespace-pre!"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Tester viết test cases → viết script\n→ Selenium / Playwright chạ"
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-attribute"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "y"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n→ Kiểm tra kết quả"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 3
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Thì bây giờ chúng ta có thể làm theo cách mới:"
+          }
+        ],
+        "order": 4
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "contain-inline-size",
+            "rounded-2xl",
+            "corner-superellipse/1.1",
+            "relative",
+            "bg-token-sidebar-surface-primary"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "overflow-y-auto",
+                "p-4"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "code",
+                "attributes": {
+                  "class": [
+                    "whitespace-pre!"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Tester mô tả hành động\n→ AI Agent hiểu ứng dụng\n→ AI tự thao tác UI\n→ AI sinh "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-built_in"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "test"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-keyword"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "case"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " và Automation script → Xuất báo cáo chi tiết"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 5
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 6
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "📌 Antigravity hỗ trợ rất mạnh cho"
+          }
+        ],
+        "order": 7
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Web Testing (mạnh nhất về Debug cấu trúc DOM với Chromium browser)"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "API Testing"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Mobile Testing"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "UI Exploration"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Test Case Generation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Automation Script Generation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Smart Locator Detection"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 8
+      },
+      {
+        "type": "line_break",
+        "tag": "br",
+        "children": [],
+        "order": 9
+      },
+      {
+        "type": "divider",
+        "tag": "hr",
+        "children": [],
+        "order": 10
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "⚡ 2. Vì sao Antigravity cực kỳ phù hợp cho Tester?"
+          }
+        ],
+        "order": 11
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Một số khả năng khiến "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Antigravity"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " trở thành "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "game changer cho Test Automation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ":"
+          }
+        ],
+        "order": 12
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "🔍 1. AI tự khám phá ứng dụng"
+          }
+        ],
+        "order": 13
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "AI có thể:"
+          }
+        ],
+        "order": 14
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Mở trang web"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Click các element"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Phân tích UI structure"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Hiểu flow của application"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 15
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Giống như một "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Junior Tester chạy exploratory testing 24/7"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ],
+        "order": 16
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 17
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "🧠 2. Hiểu được ngữ nghĩa UI"
+          }
+        ],
+        "order": 18
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Thay vì locator kiểu cũ:"
+          }
+        ],
+        "order": 19
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "contain-inline-size",
+            "rounded-2xl",
+            "corner-superellipse/1.1",
+            "relative",
+            "bg-token-sidebar-surface-primary"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "overflow-y-auto",
+                "p-4"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "code",
+                "attributes": {
+                  "class": [
+                    "whitespace-pre!",
+                    "language-xpath"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "//div[3]/div[2]/button//button[normalize-space()='Login']"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 20
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "AI sẽ hiểu luôn như một con người dùng mắt quan sát:"
+          }
+        ],
+        "order": 21
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "contain-inline-size",
+            "rounded-2xl",
+            "corner-superellipse/1.1",
+            "relative",
+            "bg-token-sidebar-surface-primary"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "overflow-y-auto",
+                "p-4"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "code",
+                "attributes": {
+                  "class": [
+                    "whitespace-pre!"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-string"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "\"Login button\""
+                      },
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-string"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "\"Submit order\""
+                      },
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-string"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "\"Add to cart\""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 22
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Điều này giúp automation "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "ổn định hơn rất nhiều"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Nhờ vào công nghệ "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "UI Vision"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " quan sát và hiểu UI"
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": ","
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Debug DOM"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " trực tiếp và có thể kết hợp với các "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "MCP Server"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " như Selenium MCP, Appium MCP, Playwright MCP để điều khiển và sinh script nhanh đúng chuẩn."
+          }
+        ],
+        "order": 23
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 24
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "⚙️ 3. Sinh Automation Script"
+          }
+        ],
+        "order": 25
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Antigravity có thể tạo:"
+          }
+        ],
+        "order": 26
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Playwright scripts"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Selenium scripts"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Test steps"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Test scenarios"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 27
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Ví dụ yêu cầu bằng ngôn ngữ tự nhiên theo dạng mô tả hoặc từ một test case manual:"
+          }
+        ],
+        "order": 28
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "contain-inline-size",
+            "rounded-2xl",
+            "corner-superellipse/1.1",
+            "relative",
+            "bg-token-sidebar-surface-primary"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "overflow-y-auto",
+                "p-4"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "code",
+                "attributes": {
+                  "class": [
+                    "whitespace-pre!"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Kiểm tra giúp tôi test case: Login successful"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "URL: https://crm.anhtester.com/admin/authentication"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Email: admin@example.com"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Password: 123456"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Steps:"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-bullet"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "1."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " Open login page"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-bullet"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "2."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " Enter email"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-bullet"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "3."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " Enter password"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-bullet"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "4."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " Click login"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-bullet"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "5."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " Verify dashboard\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 29
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Với mô tả trên là Antigravity có thể hiểu được và debug từng bước làm theo yêu cầu đến khi đạt được kết quả cuối cùng và có thể xuất ra script automation luôn để chúng ta chạy lại được."
+          }
+        ],
+        "order": 30
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 31
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "🚀 4. Tích hợp AI Workflow"
+          }
+        ],
+        "order": 32
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Bạn có thể xây dựng workflow kiểu:"
+          }
+        ],
+        "order": 33
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "contain-inline-size",
+            "rounded-2xl",
+            "corner-superellipse/1.1",
+            "relative",
+            "bg-token-sidebar-surface-primary"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "overflow-y-auto",
+                "p-4"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "code",
+                "attributes": {
+                  "class": [
+                    "whitespace-pre!"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-variable"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Explore"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-built_in"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Application"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n→ "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-variable"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Generate"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-variable"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Test"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-built_in"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Cases"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n→ "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-variable"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Generate"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-variable"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Automation"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n→ "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-variable"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Execute"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "hljs-variable"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Tests"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 34
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Đây chính là nền tảng của "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Agentic AI Testing"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ],
+        "order": 35
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 36
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "🔆 Demo sử dụng Antigravity thực hiện kiểm thử từ mô tả trên"
+          }
+        ],
+        "order": 37
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png",
+                  "alt": "",
+                  "width": "2560",
+                  "height": "1380"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png",
+                  "alt": "",
+                  "width": "2560",
+                  "height": "1380"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png",
+                  "alt": "",
+                  "width": "2560",
+                  "height": "1380"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png",
+                  "alt": "",
+                  "width": "2560",
+                  "height": "1380"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png",
+                  "alt": "",
+                  "width": "2560",
+                  "height": "1440"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png",
+                  "alt": "",
+                  "width": "2560",
+                  "height": "1380"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png",
+                "alt": "",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "order": 38
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "🧰 3. Yêu cầu trước khi cài Antigravity"
+          }
+        ],
+        "order": 39
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Trước khi bắt đầu, bạn nên chuẩn bị:"
+          }
+        ],
+        "order": 40
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "💻 Máy tính"
+          }
+        ],
+        "order": 41
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Khuyến nghị:"
+          }
+        ],
+        "order": 42
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "RAM: "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "16GB"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Cài sẵn Chrome / Edge mới nhất"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 43
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 44
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "🧠 Tài khoản Google AI"
+          }
+        ],
+        "order": 45
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Bạn cần một tài khoản có quyền truy cập "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Google AI Plan"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " như gói "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Pro"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " và "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Ultra"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " để sử dụng thoải mái hơn."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Hoặc bạn cũng có thể mua Credits rời nhưng sẽ hơi tốn kém hơn so với mua dạng gói."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Các bạn cần chuẩn bị account Google AI Pro hoặc Ultra thì mới dùng được Antigravity nhé."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "attributes": {
+              "class": [
+                "html-br"
+              ]
+            },
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "attributes": {
+              "class": [
+                "html-br"
+              ]
+            },
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "html-span",
+                "xdj266r",
+                "x14z9mp",
+                "xat24cr",
+                "x1lziwak",
+                "xexx8yu",
+                "xyri2b",
+                "x18d9i69",
+                "x1c1uobl",
+                "x1hl2dhg",
+                "x16tdsg8",
+                "x1vvkbs"
+              ]
+            },
+            "children": [
+              {
+                "type": "link",
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "x1i10hfl",
+                    "xjbqb8w",
+                    "x1ejq31n",
+                    "x18oe1m7",
+                    "x1sy0etr",
+                    "xstzfhl",
+                    "x972fbf",
+                    "x10w94by",
+                    "x1qhh985",
+                    "x14e42zd",
+                    "x9f619",
+                    "x1ypdohk",
+                    "xt0psk2",
+                    "x3ct3a4",
+                    "xdj266r",
+                    "x14z9mp",
+                    "xat24cr",
+                    "x1lziwak",
+                    "xexx8yu",
+                    "xyri2b",
+                    "x18d9i69",
+                    "x1c1uobl",
+                    "x16tdsg8",
+                    "x1hl2dhg",
+                    "xggy1nq",
+                    "x1a2a7pz",
+                    "xkrqix3",
+                    "x1sur9pj",
+                    "x1fey0fg",
+                    "x1s688f"
+                  ],
+                  "href": "https://one.google.com/about/google-ai-plans/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExbUVkb1hheEkwUmd0QVhoWHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5O1gHOOxnswYgdtdjxNf3Xo4A21SH48od-B4HivHGGj5j87jXjtt1dOteTbQ_aem_ZmFrZWR1bW15MTZieXRlcw"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "https://one.google.com/about/google-ai-plans/"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "attributes": {
+              "class": [
+                "html-br"
+              ]
+            },
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "html-span",
+                "xdj266r",
+                "x14z9mp",
+                "xat24cr",
+                "x1lziwak",
+                "xexx8yu",
+                "xyri2b",
+                "x18d9i69",
+                "x1c1uobl",
+                "x1hl2dhg",
+                "x16tdsg8",
+                "x1vvkbs"
+              ]
+            },
+            "children": [
+              {
+                "type": "link",
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "x1i10hfl",
+                    "xjbqb8w",
+                    "x1ejq31n",
+                    "x18oe1m7",
+                    "x1sy0etr",
+                    "xstzfhl",
+                    "x972fbf",
+                    "x10w94by",
+                    "x1qhh985",
+                    "x14e42zd",
+                    "x9f619",
+                    "x1ypdohk",
+                    "xt0psk2",
+                    "x3ct3a4",
+                    "xdj266r",
+                    "x14z9mp",
+                    "xat24cr",
+                    "x1lziwak",
+                    "xexx8yu",
+                    "xyri2b",
+                    "x18d9i69",
+                    "x1c1uobl",
+                    "x16tdsg8",
+                    "x1hl2dhg",
+                    "xggy1nq",
+                    "x1a2a7pz",
+                    "xkrqix3",
+                    "x1sur9pj",
+                    "x1fey0fg",
+                    "x1s688f"
+                  ],
+                  "href": "https://antigravity.google/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExbUVkb1hheEkwUmd0QVhoWHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4qJSFTS48ezaS1S1QGYhPj3PAKoDJ8HADjf9eFlLHXPODwh-KGUa3T6UzB4Q_aem_vCX0J99aBFAU4cHrm-37bg"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "https://antigravity.google/"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "attributes": {
+              "class": [
+                "html-br"
+              ]
+            },
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg",
+                  "alt": "",
+                  "width": "2048",
+                  "height": "1272"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg",
+                "alt": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "attributes": {
+              "class": [
+                "html-br"
+              ]
+            },
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Góp ý"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": Các bạn mới học hoặc đang trong giai đoạn học ngâm cứu Antigravity thì nên mua gói Ultra dạng được add vào Family từ các bên ngoài bán để học cho rẻ, tầm 300k 350k 400k gì đó cho 1 tháng. (nếu cần thì nhắn mình trong nhóm Telegram mình share cho vài chỗ người bán uy tín)"
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "attributes": {
+              "class": [
+                "html-br"
+              ]
+            },
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Gói Pro thì cũng được nhưng sợ đang ngâm cứu thì hết token 😂"
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "(giá thì hiện tại gói Pro mình thấy nhiều người bán 99k 100k)"
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 46
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "⚙️4. Cài đặt Antigravity"
+          }
+        ],
+        "order": 47
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "Dưới đây là hướng dẫn chi tiết các bước cài đặt và thiết lập "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "Google Antigravity:"
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "order": 48
+      },
+      {
+        "type": "heading",
+        "tag": "h4",
+        "attributes": {
+          "class": [
+            "paragraph",
+            "is-rich-chat-ui",
+            "heading3",
+            "ng-star-inserted"
+          ]
+        },
+        "level": 4,
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "🟡 1. Tải xuống và Cài đặt"
+              }
+            ]
+          }
+        ],
+        "order": 49
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "attributes": {
+          "class": [
+            "ng-star-inserted"
+          ]
+        },
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Truy cập trang chủ: "
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://antigravity.google/download"
+                    },
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "https://antigravity.google/download"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Chọn phiên bản phù hợp với thiết bị của bạn:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "list",
+                "tag": "ul",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "ordered": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Windows:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " Tải tệp "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "code",
+                        "attributes": {
+                          "class": [
+                            "code",
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": ".exe"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": ". Khuyến nghị cài đặt trên "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "ổ C:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " để tránh các lỗi phân quyền hoặc lỗi đăng nhập."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "macOS:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " Tải tệp "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "code",
+                        "attributes": {
+                          "class": [
+                            "code",
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": ".dmg"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": ", kéo biểu tượng vào thư mục "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Applications"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Linux:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " Tải gói "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "code",
+                        "attributes": {
+                          "class": [
+                            "code",
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": ".deb"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " hoặc "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "code",
+                        "attributes": {
+                          "class": [
+                            "code",
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": ".rpm"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " và cài đặt qua terminal."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 50
+      },
+      {
+        "type": "heading",
+        "tag": "h4",
+        "attributes": {
+          "class": [
+            "paragraph",
+            "is-rich-chat-ui",
+            "heading3",
+            "ng-star-inserted"
+          ]
+        },
+        "level": 4,
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "🟡 2. Thiết lập Ban đầu (Initial Setup)"
+              }
+            ]
+          }
+        ],
+        "order": 51
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "paragraph",
+            "is-rich-chat-ui",
+            "normal",
+            "ng-star-inserted"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "Khi khởi chạy ứng dụng lần đầu, hệ thống sẽ dẫn bạn qua các bước cấu hình:"
+              }
+            ]
+          }
+        ],
+        "order": 52
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "attributes": {
+          "class": [
+            "ng-star-inserted"
+          ]
+        },
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Chọn luồng thiết lập (Setup flow):"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Chọn "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\"Start Fresh\""
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " nếu bạn muốn bắt đầu mới, hoặc "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\"Import from Cursor/VS Code\""
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " để nhập lại các cấu hình và tiện ích cũ."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Chọn giao diện (Theme):"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Lựa chọn giữa chế độ Tối (Dark), Sáng (Light) hoặc Độ tương phản cao."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Cài đặt Tiện ích mở rộng:"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Đồng ý cài đặt các "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Recommended Extensions"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " (thường là các plugin ngôn ngữ và hỗ trợ AI) để tối ưu hóa khả năng của tác nhân."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Đăng nhập:"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Nhấn \"Sign in with Google\" và hoàn tất đăng nhập trên trình duyệt web, sau đó đồng ý với các "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Điều khoản sử dụng"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 53
+      },
+      {
+        "type": "heading",
+        "tag": "h4",
+        "attributes": {
+          "class": [
+            "paragraph",
+            "is-rich-chat-ui",
+            "heading3",
+            "ng-star-inserted"
+          ]
+        },
+        "level": 4,
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "🟡 3. Cấu hình Chính sách Thực thi (Agent Policies)"
+              }
+            ]
+          }
+        ],
+        "order": 54
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "paragraph",
+            "is-rich-chat-ui",
+            "normal",
+            "ng-star-inserted"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "Đây là phần quan trọng nhất để kiểm soát quyền hạn của AI:"
+              }
+            ]
+          }
+        ],
+        "order": 55
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "attributes": {
+          "class": [
+            "ng-star-inserted"
+          ]
+        },
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Terminal Execution Policy (Chạy lệnh Terminal):"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "list",
+                "tag": "ul",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "ordered": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Turbo:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " AI tự động chạy mọi lệnh."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Auto (Khuyến nghị):"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " AI tự chạy lệnh an toàn và xin phép với lệnh nhạy cảm."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Off:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " AI phải hỏi ý kiến bạn trước mỗi lệnh."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Review Policy (Duyệt kế hoạch và Mã nguồn):"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "list",
+                "tag": "ul",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "ordered": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Always Proceed:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " AI tự làm việc không dừng."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Agent Decides:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " AI tự quyết khi nào cần bạn duyệt."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "paragraph",
+                        "list-item",
+                        "is-rich-chat-ui",
+                        "normal",
+                        "ng-star-inserted"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Request Review:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "ng-star-inserted"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": " Bạn phải duyệt qua mọi kế hoạch và tệp tin AI tạo ra trước khi nó tiếp tục."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Gợi ý:"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Nếu là người mới, bạn nên chọn cấu hình sẵn là "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\"Agent-assisted development\""
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " để có sự cân bằng giữa tốc độ và sự kiểm soát."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 56
+      },
+      {
+        "type": "heading",
+        "tag": "h4",
+        "attributes": {
+          "class": [
+            "paragraph",
+            "is-rich-chat-ui",
+            "heading3",
+            "ng-star-inserted"
+          ]
+        },
+        "level": 4,
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "🟡 4. Thiết lập Tính năng Nâng cao"
+              }
+            ]
+          }
+        ],
+        "order": 57
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "attributes": {
+          "class": [
+            "ng-star-inserted"
+          ]
+        },
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Browser Mode (Chế độ Trình duyệt):"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Nhấn vào nút \"Browser\" ở góc dưới bên trái giao diện. Bạn sẽ được hướng dẫn cài đặt "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Chrome extension"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": ". Tính năng này cho phép AI tự động mở trình duyệt để kiểm thử giao diện (UI) và thực hiện các tác vụ web."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Rules (Quy tắc dự án):"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Bạn có thể tạo tệp "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": ".antigravity/rules.md"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " trong thư mục dự án. AI sẽ tự động đọc tệp này để tuân thủ các tiêu chuẩn code, cách đặt tên hoặc định dạng tài liệu của riêng bạn."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Workflows (Quy trình làm việc):"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Định nghĩa các tác vụ lặp lại trong thư mục "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": ".agent/workflows/"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " và kích hoạt chúng bằng lệnh "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "/"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " trong khung chat."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 58
+      },
+      {
+        "type": "heading",
+        "tag": "h4",
+        "attributes": {
+          "class": [
+            "paragraph",
+            "is-rich-chat-ui",
+            "heading3",
+            "ng-star-inserted"
+          ]
+        },
+        "level": 4,
+        "children": [
+          {
+            "type": "element",
+            "tag": "span",
+            "attributes": {
+              "class": [
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "🟡 5. Cách vận hành cơ bản"
+              }
+            ]
+          }
+        ],
+        "order": 59
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "attributes": {
+          "class": [
+            "ng-star-inserted"
+          ]
+        },
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Mở dự án:"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Sử dụng "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Open Folder"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " để trỏ đến thư mục mã nguồn trên máy."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Agent Manager:"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Sử dụng phím tắt "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Ctrl + E"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " (hoặc Cmd + E) để mở bảng quản lý. Tại đây bạn có thể chạy nhiều tác nhân AI song song cho các nhiệm vụ khác nhau."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "attributes": {
+              "class": [
+                "paragraph",
+                "list-item",
+                "is-rich-chat-ui",
+                "normal",
+                "ng-star-inserted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Tương tác:"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " Nhập yêu cầu bằng ngôn ngữ tự nhiên. AI sẽ xuất ra các "
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Artifacts"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "ng-star-inserted"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": " (tạo tác) như bản kế hoạch, danh sách công việc hoặc video quay màn hình kiểm thử để bạn theo dõi và phê duyệt."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 60
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 61
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "📗5. Sử dụng Antigravity"
+          }
+        ],
+        "order": 62
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "🎯 Mục tiêu đạt được cơ bản"
+          }
+        ],
+        "order": 63
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "🧠 Thiết lập "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Browser Agent"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "⚙️ Quản lý "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Agent Manager"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "📎 Đính kèm "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "file / media"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "🧩 "
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Dùng "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Prompt"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " để giao tiếp với AI Agent"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 64
+      },
+      {
+        "type": "line_break",
+        "tag": "br",
+        "children": [],
+        "order": 65
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Antigravity"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " xoay quanh 1 thứ duy nhất:"
+          }
+        ],
+        "order": 66
+      },
+      {
+        "type": "blockquote",
+        "tag": "blockquote",
+        "attributes": {
+          "class": [
+            "rt-quote"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "👉 "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "AI Agent"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 67
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Bạn không viết code, bạn chỉ cần "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "ra lệnh cho AI"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ],
+        "order": 68
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "🧩 Flow hoạt động"
+          }
+        ],
+        "order": 69
+      },
+      {
+        "type": "code_block",
+        "tag": "pre",
+        "attributes": {
+          "class": [
+            "line-numbers",
+            "language-markdown"
+          ]
+        },
+        "code": "Bạn nhập prompt\n↓\nAI hiểu yêu cầu\n↓\nAI mở browser (nếu cần)\n↓\nAI thao tác UI (nếu cần)\n↓\nAI trả kết quả (test case / script / report)",
+        "language": "markdown",
+        "order": 70
+      }
+    ]
+  },
+  "json_path": "chapters/chapter-01/lesson-002.json",
+  "markdown_path": "chapters/chapter-01/lesson-002.md",
+  "exported_at": "2026-11-19T12:53:35.346219+07:00",
+  "short_description_html": "<p>Trong <strong>Bài 1</strong>, chúng ta đã nói về <strong>con đường ứng dụng AI trong Test Automation từ năm 2026</strong>, nơi Tester không chỉ viết test script mà còn <strong>điều khiển AI Agent để thực hiện testing</strong>.<br><br>Ở <strong>Bài 2</strong>, chúng ta sẽ bắt đầu với một công cụ rất đáng chú ý:</p>\n<p>🧠 <strong>Google Antigravity</strong> – nền tảng giúp bạn dùng AI để khám phá ứng dụng, viết automation và tạo test case gần như tự động.</p>\n<h3><br>Bài này sẽ tập trung vào:</h3>\n<p>✨ Google Antigravity là gì</p>\n<p>🧠 Nó hoạt động như thế nào</p>\n<p>⚙️ Cách đăng ký và cài đặt</p>\n<p>🔧 Cấu hình môi trường để dùng cho Test Automation</p>\n<p>🚀 Kiểm tra hoạt động đầu tiên với yêu cầu Test Automation thực chiến</p>",
+  "intro": {
+    "html": "\n                                                    <div class=\"ratio ratio-16x9\">\n                                <iframe src=\"https://www.youtube.com/embed/UZ3BsPsbg6g\" title=\"[AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity\" allowfullscreen=\"\" frameborder=\"0\"></iframe>\n                            </div>\n                                                <div class=\"card-body\">\n                            \n                                                        \n                                                            <p class=\"text-muted fs-14 mb-0\">\n                                    <i class=\"isax isax-video-circle me-1\"></i>\n                                     3 giờ 12 phút                                                                     </p>\n                                                        <div class=\"mb-0 mt-4 lesson-short-desc\"><p>Trong <strong>Bài 1</strong>, chúng ta đã nói về <strong>con đường ứng dụng AI trong Test Automation từ năm 2026</strong>, nơi Tester không chỉ viết test script mà còn <strong>điều khiển AI Agent để thực hiện testing</strong>.<br><br>Ở <strong>Bài 2</strong>, chúng ta sẽ bắt đầu với một công cụ rất đáng chú ý:</p>\n<p>🧠 <strong>Google Antigravity</strong> – nền tảng giúp bạn dùng AI để khám phá ứng dụng, viết automation và tạo test case gần như tự động.</p>\n<h3><br>Bài này sẽ tập trung vào:</h3>\n<p>✨ Google Antigravity là gì</p>\n<p>🧠 Nó hoạt động như thế nào</p>\n<p>⚙️ Cách đăng ký và cài đặt</p>\n<p>🔧 Cấu hình môi trường để dùng cho Test Automation</p>\n<p>🚀 Kiểm tra hoạt động đầu tiên với yêu cầu Test Automation thực chiến</p></div>                        </div>\n                    ",
+    "blocks": [
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "ratio",
+            "ratio-16x9"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "embed",
+            "tag": "iframe",
+            "attributes": {
+              "src": "https://www.youtube.com/embed/UZ3BsPsbg6g",
+              "title": "[AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+              "allowfullscreen": "",
+              "frameborder": "0"
+            },
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 1
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "card-body"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "attributes": {
+              "class": [
+                "text-muted",
+                "fs-14",
+                "mb-0"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "element",
+                "tag": "i",
+                "attributes": {
+                  "class": [
+                    "isax",
+                    "isax-video-circle",
+                    "me-1"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "\n                                     3 giờ 12 phút                                                                     "
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "attributes": {
+              "class": [
+                "mb-0",
+                "mt-4",
+                "lesson-short-desc"
+              ]
+            },
+            "children": [
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Trong "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Bài 1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ", chúng ta đã nói về "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "con đường ứng dụng AI trong Test Automation từ năm 2026"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ", nơi Tester không chỉ viết test script mà còn "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "điều khiển AI Agent để thực hiện testing"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Ở "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Bài 2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ", chúng ta sẽ bắt đầu với một công cụ rất đáng chú ý:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "🧠 "
+                  },
+                  {
+                    "type": "element",
+                    "tag": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Google Antigravity"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " – nền tảng giúp bạn dùng AI để khám phá ứng dụng, viết automation và tạo test case gần như tự động."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "heading",
+                "tag": "h3",
+                "level": 3,
+                "children": [
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Bài này sẽ tập trung vào:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "✨ Google Antigravity là gì"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "🧠 Nó hoạt động như thế nào"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "⚙️ Cách đăng ký và cài đặt"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "🔧 Cấu hình môi trường để dùng cho Test Automation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "🚀 Kiểm tra hoạt động đầu tiên với yêu cầu Test Automation thực chiến"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 2
+      }
+    ]
+  },
+  "images": [
+    {
+      "order": 1,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png",
+        "category": "image",
+        "path": "assets/656c012d6ee9b95ef6b2.png",
+        "status": "downloaded",
+        "bytes": 193124,
+        "sha256": "c1c9d0ba9eefa4536cb6d9dbde617ffe989c62e704466231767cc6fcabc43b00",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 2,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png",
+        "category": "image",
+        "path": "assets/15a1bc508d245de0747c.png",
+        "status": "downloaded",
+        "bytes": 260185,
+        "sha256": "fb81df3361ec3d3c45e18d708495d989d4162596a657007e8911a412cf78eabc",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 3,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png",
+        "category": "image",
+        "path": "assets/7ea5bc9804131da4e203.png",
+        "status": "downloaded",
+        "bytes": 204016,
+        "sha256": "96c2d1ed3ebf6966d366a796ae7c0f27421b4495fb8c7446d076644123106d11",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 4,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png",
+        "category": "image",
+        "path": "assets/f85a68bb05460aaf2658.png",
+        "status": "downloaded",
+        "bytes": 311588,
+        "sha256": "b52b399bf6b1fe9cf342c4f7fd5f1523bbadffbeedeceedc2cf8747498d1b6c2",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 5,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png",
+        "category": "image",
+        "path": "assets/aa9fc062be96545e4d56.png",
+        "status": "downloaded",
+        "bytes": 251415,
+        "sha256": "1c12c7851fa2b6f6eb9ed72a91be0ee0562f2f8563df25d99e4038fd08114766",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 6,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png",
+        "category": "image",
+        "path": "assets/708c4af87d0c01eeabc5.png",
+        "status": "downloaded",
+        "bytes": 420264,
+        "sha256": "60c45f59f477213f21a0cef05ae94326d9c34a74d1ce167aea9114832aec5ac2",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 7,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg",
+      "alt": "",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg",
+        "category": "image",
+        "path": "assets/5d114799c49bfaa4367b.jpg",
+        "status": "downloaded",
+        "bytes": 166590,
+        "sha256": "ed9574384da7709d1debfda7c3b0a54224bfe98d3a9c0d13fddd6ef26b6fe23d",
+        "content_type": "image/jpeg"
+      }
+    }
+  ],
+  "media": [
+    {
+      "order": 1,
+      "type": "iframe",
+      "url": "https://www.youtube.com/embed/UZ3BsPsbg6g",
+      "title": "[AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+      "poster": "",
+      "position": "before_lesson_content",
+      "download_offered": false
+    }
+  ],
+  "links": [
+    {
+      "order": 1,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png",
+      "download": false
+    },
+    {
+      "order": 2,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png",
+      "download": false
+    },
+    {
+      "order": 3,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png",
+      "download": false
+    },
+    {
+      "order": 4,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png",
+      "download": false
+    },
+    {
+      "order": 5,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png",
+      "download": false
+    },
+    {
+      "order": 6,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png",
+      "download": false
+    },
+    {
+      "order": 7,
+      "text": "https://one.google.com/about/google-ai-plans/",
+      "url": "https://one.google.com/about/google-ai-plans/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExbUVkb1hheEkwUmd0QVhoWHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5O1gHOOxnswYgdtdjxNf3Xo4A21SH48od-B4HivHGGj5j87jXjtt1dOteTbQ_aem_ZmFrZWR1bW15MTZieXRlcw",
+      "download": false
+    },
+    {
+      "order": 8,
+      "text": "https://antigravity.google/",
+      "url": "https://antigravity.google/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExbUVkb1hheEkwUmd0QVhoWHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4qJSFTS48ezaS1S1QGYhPj3PAKoDJ8HADjf9eFlLHXPODwh-KGUa3T6UzB4Q_aem_vCX0J99aBFAU4cHrm-37bg",
+      "download": false
+    },
+    {
+      "order": 9,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg",
+      "download": false
+    },
+    {
+      "order": 10,
+      "text": "https://antigravity.google/download",
+      "url": "https://antigravity.google/download",
+      "download": false
+    }
+  ],
+  "videos": [
+    {
+      "order": 1,
+      "source_url": "https://www.youtube.com/embed/UZ3BsPsbg6g",
+      "title": "[AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+      "references": [
+        {
+          "order": 1,
+          "type": "iframe",
+          "url": "https://www.youtube.com/embed/UZ3BsPsbg6g",
+          "title": "[AI Test Automation] Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+          "poster": "",
+          "position": "before_lesson_content",
+          "download_offered": false
+        }
+      ],
+      "download_status": "excluded_from_repository",
+      "provider": "youtube",
+      "video_id": "UZ3BsPsbg6g",
+      "watch_url": "https://www.youtube.com/watch?v=UZ3BsPsbg6g",
+      "availability_check": "official_oembed_ok",
+      "remote_title": "[AI Test Automation] Bài 2 - Giới thiệu và Cài đặt sử dụng công cụ Google Antigravity",
+      "thumbnail_url": "https://i.ytimg.com/vi/UZ3BsPsbg6g/hqdefault.jpg",
+      "source_has_drm": false,
+      "file_included": false,
+      "download_reason": "Chỉ đăng URL/metadata video lên Git theo yêu cầu; tệp MP4 vẫn được giữ trong bản xuất cục bộ."
+    }
+  ],
+  "media_audit": {
+    "declared_media_references": 1,
+    "declared_urls": [
+      "https://www.youtube.com/embed/UZ3BsPsbg6g"
+    ],
+    "intro_iframe_count": 1
+  },
+  "assignment_link": null,
+  "assets": [
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-28.png",
+      "category": "image",
+      "path": "assets/656c012d6ee9b95ef6b2.png",
+      "status": "downloaded",
+      "bytes": 193124,
+      "sha256": "c1c9d0ba9eefa4536cb6d9dbde617ffe989c62e704466231767cc6fcabc43b00",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-36.png",
+      "category": "image",
+      "path": "assets/15a1bc508d245de0747c.png",
+      "status": "downloaded",
+      "bytes": 260185,
+      "sha256": "fb81df3361ec3d3c45e18d708495d989d4162596a657007e8911a412cf78eabc",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-24-54.png",
+      "category": "image",
+      "path": "assets/7ea5bc9804131da4e203.png",
+      "status": "downloaded",
+      "bytes": 204016,
+      "sha256": "96c2d1ed3ebf6966d366a796ae7c0f27421b4495fb8c7446d076644123106d11",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-26.png",
+      "category": "image",
+      "path": "assets/f85a68bb05460aaf2658.png",
+      "status": "downloaded",
+      "bytes": 311588,
+      "sha256": "b52b399bf6b1fe9cf342c4f7fd5f1523bbadffbeedeceedc2cf8747498d1b6c2",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-27-54.png",
+      "category": "image",
+      "path": "assets/aa9fc062be96545e4d56.png",
+      "status": "downloaded",
+      "bytes": 251415,
+      "sha256": "1c12c7851fa2b6f6eb9ed72a91be0ee0562f2f8563df25d99e4038fd08114766",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/2026-03-17_11-28-55.png",
+      "category": "image",
+      "path": "assets/708c4af87d0c01eeabc5.png",
+      "status": "downloaded",
+      "bytes": 420264,
+      "sha256": "60c45f59f477213f21a0cef05ae94326d9c34a74d1ce167aea9114832aec5ac2",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/antigravity/bai2_setup_antigravity/651094614_917492037697437_5089030477400325021_n.jpg",
+      "category": "image",
+      "path": "assets/5d114799c49bfaa4367b.jpg",
+      "status": "downloaded",
+      "bytes": 166590,
+      "sha256": "ed9574384da7709d1debfda7c3b0a54224bfe98d3a9c0d13fddd6ef26b6fe23d",
+      "content_type": "image/jpeg"
+    }
+  ],
+  "quality": {
+    "checked_at": "2026-11-19T12:53:34.616845+07:00",
+    "passed": true,
+    "checks": {
+      "code_exact_html": true,
+      "code_exact_json": true,
+      "code_markdown_whitespace": true,
+      "headings_exact": true,
+      "table_count_matches": true,
+      "image_count_matches": true,
+      "paragraph_count_matches": true,
+      "list_count_matches": true,
+      "blockquote_count_matches": true,
+      "all_cleaned_text_preserved": true,
+      "content_nonempty": true,
+      "no_form_or_script": true
+    },
+    "heading_count": 24,
+    "code_block_count": 1,
+    "table_count": 0,
+    "image_count": 7,
+    "code_sha256": [
+      "2682dc4ad12baee49f22f472f5da26b24d0be79dabc8eb29f98f4c2b2cb4d72a"
+    ],
+    "content_text_sha256": "9736e99a9e6885a42b6ae696c9c6c107045d958ee57651db1da10db7ad68dad7",
+    "note": "JSON/HTML preserve code exactly. Markdown adds the required final line ending before a closing fence when absent in the source."
+  },
+  "assignment": null,
+  "redacted_url_parameter_count": 0,
+  "content_kind": "lesson_article"
+}

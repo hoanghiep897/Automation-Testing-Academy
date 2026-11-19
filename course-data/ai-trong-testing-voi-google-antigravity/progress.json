@@ -1,0 +1,79 @@
+{
+  "scope": "full_course_content",
+  "updated_at": "2026-11-19T13:20:05.971272+07:00",
+  "catalog_exported": 8,
+  "catalog_failed": 0,
+  "full_content_exported": 8,
+  "full_content_failed": 0,
+  "metadata_only": 0,
+  "lessons": {
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/283": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-001.json",
+      "markdown_path": "chapters/chapter-01/lesson-001.md",
+      "updated_at": "2026-11-19T12:53:19.097997+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/284": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-002.json",
+      "markdown_path": "chapters/chapter-01/lesson-002.md",
+      "updated_at": "2026-11-19T12:53:35.351676+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/285": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-003.json",
+      "markdown_path": "chapters/chapter-01/lesson-003.md",
+      "updated_at": "2026-11-19T12:53:48.084490+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/286": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-004.json",
+      "markdown_path": "chapters/chapter-01/lesson-004.md",
+      "updated_at": "2026-11-19T12:54:07.594181+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/287": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-005.json",
+      "markdown_path": "chapters/chapter-01/lesson-005.md",
+      "updated_at": "2026-11-19T12:54:21.583709+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/288": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-006.json",
+      "markdown_path": "chapters/chapter-01/lesson-006.md",
+      "updated_at": "2026-11-19T12:54:41.128795+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/289": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-007.json",
+      "markdown_path": "chapters/chapter-01/lesson-007.md",
+      "updated_at": "2026-11-19T12:54:53.397877+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-testing-voi-google-antigravity/290": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-008.json",
+      "markdown_path": "chapters/chapter-01/lesson-008.md",
+      "updated_at": "2026-11-19T12:55:02.915017+07:00"
+    }
+  },
+  "sample_limit": 8,
+  "full_content_skipped": 0,
+  "video_downloaded_count": 0,
+  "video_failed_count": 0,
+  "video_total": 9,
+  "video_excluded_count": 9,
+  "repository_publication": {
+    "video_mode": "urls_only",
+    "video_files_included": 0,
+    "video_urls": 9,
+    "excluded_at_user_request": true
+  }
+}

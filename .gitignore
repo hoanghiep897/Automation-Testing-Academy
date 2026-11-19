@@ -32,3 +32,12 @@ __pycache__/
 # Keep the extracted data once; do not commit the transport archive.
 /*-export.zip
 /course-data/*/*-export.zip
+
+# Google Antigravity course: publish metadata/URLs, keep local videos out.
+/course-data/ai-trong-testing-voi-google-antigravity/assets/videos/
+/course-data/ai-trong-testing-voi-google-antigravity/**/*.mp4
+/course-data/ai-trong-testing-voi-google-antigravity/**/*.m4v
+/course-data/ai-trong-testing-voi-google-antigravity/**/*.mov
+/course-data/ai-trong-testing-voi-google-antigravity/**/*.webm
+/course-data/ai-trong-testing-voi-google-antigravity/**/*.mkv
+/course-data/ai-trong-testing-voi-google-antigravity/**/*.avi
