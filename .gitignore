@@ -30,4 +30,5 @@ __pycache__/
 *.key
 
 # Keep the extracted data once; do not commit the transport archive.
-anhtester-course-export.zip
+/*-export.zip
+/course-data/*/*-export.zip

@@ -1,0 +1,3205 @@
+{
+  "order": 3,
+  "source_id": "358",
+  "chapter_order": 1,
+  "chapter_title": "1. NỘI DUNG KHOÁ HỌC",
+  "title": "Bài 3 - Cài đặt và sử dụng Git GitHub GitLab",
+  "url": "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/358",
+  "duration": "2 giờ",
+  "export_scope": "full_lesson_content",
+  "content_status": "exported",
+  "content": {
+    "html": "<h2>✳️ Tìm hiểu tổng quan về Git</h2>\n<h3>1. Git là gì?</h3>\n<p><em><strong>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.<br><br></strong></em>Định nghĩa ở trên mình lấy ở trang&nbsp;<a href=\"https://git-scm.com/\">git-scm.com</a>. Hiểu nôm na Git là một phần mềm quản lý mã nguồn (source code) phân tán.<br><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png\" alt=\"[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester\" width=\"477\" height=\"268\"></a></p>\n<h3><br>2. Ưu điểm của git</h3>\n<ul>\n<li>Giúp quản lý mã nguồn đơn giản, an toàn và dễ sử dụng.</li>\n<li>Tối ưu hóa việc quản lý source code khi làm việc theo nhóm bằng cách chia và kết hợp ra các nhánh (branch).</li>\n<li>Dễ dàng tích hợp CI/CD trong việc deployment với git.</li>\n<li>Có thể dễ dàng lấy source code ở bất kỳ đâu chỉ cần clone từ git server về máy của bạn.</li>\n</ul>\n<p>&nbsp;</p>\n<h3>3. Git server là gì?</h3>\n<ul>\n<li>Git server là máy chủ (server) có cài đặt dịch vụ git. Source code sẽ được lưu trữ ở máy server này.</li>\n<li>Một số git server phổ biến: GitHub, Bitbucket, GitLab, Microsoft Azure DevOps, Amazon AWS CodeCommit ...</li>\n</ul>\n<p><strong><br>Note:</strong>&nbsp;Các bạn mới cần phân biệt giữa git và git server.</p>\n<p><strong>Ví dụ:</strong> GitHub là một git server. Bạn có thể tạo một respository trên github. Repository trên git server này gọi là remote repository. Bạn có thể Clone <strong>Remote Repository</strong>&nbsp;về máy bạn thành&nbsp;<strong>Local Repository<br><br></strong><a href=\"https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png\"><img src=\"https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png\" alt=\"[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester\" width=\"825\" height=\"541\"></a></p>\n<h3>4. Repository là gì?</h3>\n<p><a href=\"https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png\"><img src=\"https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png\" alt=\"[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester\" width=\"600\" height=\"439\"></a></p>\n<ul>\n<li>\n<p>Repostiory được hiểu như là một nơi lưu trữ chứa mã nguồn (source code) và tất cả thông tin liên quan đến việc sửa đổi và lịch sử của toàn bộ project (dự án).</p>\n</li>\n<li>\n<p>Dữ liệu của repository git có thể xem ở folder .git:<br><br><a href=\"https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png\" alt=\"[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester\" width=\"1662\" height=\"1069\"></a></p>\n</li>\n<li>\n<p>Respository có 2 loại:</p>\n<ul>\n<li><strong>Remote Repository:</strong>&nbsp;đặt ở git server và có thể chia sẻ tới nhiều người.</li>\n<li><strong>Local Repository:</strong>&nbsp;đặt ở máy local chỉ cho bản thân mình dùng. Bạn có thể Clone Remote Repository về máy bạn thành Local Repository. Và sau khi có thay đổi ở Local Repository có thể push code lên Remote Repository.<br><br></li>\n</ul>\n</li>\n</ul>\n<h3>5. Branch là gì?</h3>\n<p><a href=\"https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png\"><img src=\"https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png\" alt=\"[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester\" width=\"1636\" height=\"800\"></a></p>\n<ul>\n<li><strong>Branch</strong> là nhánh của <strong>repository</strong>, hiểu đơn giản nó như một khu vực làm việc riêng (workspace). Khi tạo ra repository (kho chứa) ở git ta sẽ có 1 branch chính (master/main). Từ branch chính này ta có thể phân chia thành nhiều branch nhỏ. Branch đã phân nhánh này không ảnh hưởng đến branch chính vậy nên ta có thể tiến hành nhiều thay đổi trên cùng 1 repository. Đồng thời ta có thể merge (kết hợp) các branch với nhau.</li>\n</ul>\n<p><strong>Ví dụ:</strong></p>\n<ul>\n<li>\n<p>Khi ta làm một tính năng (feature) mới ta có thể tạo ra một branch riêng để code cho feature này. Sau khi feature hoàn thành ta có thể merge code vào branch chính (master).</p>\n</li>\n<li>\n<p>Hoặc trong team có nhiều team members ta có thể chia repository thành nhiều branch. Với mỗi branch cho một người. Việc chia thành các branch riêng biệt rất tiện lợi cho việc làm việc theo nhóm và tách biệt source code, cùng lúc chỉnh sửa trên 1 repository.</p>\n</li>\n<li>\n<p>Có 2 loại branch. Tương tự như repository, branch cũng có 2 loại:</p>\n<ul>\n<li><strong>Remote Branch:</strong>&nbsp;là branch lưu ở git server. Branch này có thể chia sẻ với người khác được.</li>\n<li><strong>Local branch:</strong> là branch lưu ở local máy của mình. Nó có thể liên kết với 1 remote branch hoặc không.</li>\n</ul>\n</li>\n</ul>\n<p>&nbsp;</p>\n<h2>✳️ Các bước cài đặt để sử dụng được Git trên Windows</h2>\n<ul>\n<li><strong>Bước 1</strong>: cài đặt phần mềm <strong>Git SCM</strong></li>\n<li><strong>Bước 2</strong>: cài đặt công cụ quản lý Git là <strong>Tortoisegit</strong> trên <strong>Windows</strong> (hoặc <strong>GitHub Desktop</strong> cho cả <strong>MacOS</strong>)</li>\n<li><strong>Bước 3</strong>: đăng ký tài khoản trên dịch vụ <strong>GitHub</strong> để lưu trữ source code</li>\n<li><strong>Bước 4</strong>: tạo repository trên GitHub và kết nối với máy tính Windows</li>\n</ul>\n<p><br>Link tải <strong>Git SCM</strong>: <a href=\"https://git-scm.com/download/\">https://git-scm.com/download/</a><br><br></p>\n<ul>\n<li>Chi tiết cài đặt <strong>Git SCM</strong> các bạn có thể tham khảo: <a href=\"https://phoenixnap.com/kb/how-to-install-git-windows\">https://phoenixnap.com/kb/how-to-install-git-windows</a></li>\n</ul>\n<p><br>Link tải <strong>Tortoisegit (chỉ dành cho Window)</strong>: <a href=\"https://tortoisegit.org/download/\">https://tortoisegit.org/download/</a><br><br>Link <strong>GitHub</strong>: <a href=\"https://github.com/\">https://github.com/</a><br><br></p>\n<ul>\n<li>Tạo mới một remote repository trên GiHub:&nbsp;</li>\n</ul>\n<p><a href=\"https://docs.github.com/en/get-started/quickstart/create-a-repo\">https://docs.github.com/en/get-started/quickstart/create-a-repo</a><br><br>Link tải <strong>GitHub Desktop (dành cho cả Window và MacOS)</strong>: <a href=\"https://desktop.github.com/\">https://desktop.github.com/</a><br><br>Link <strong>GitLab</strong>: <a href=\"https://gitlab.com/users/sign_up\">https://gitlab.com/users/sign_up</a></p>\n<p><br>An sẽ chỉ các bạn trên <strong>GitHub</strong>. Còn <strong>GitLab</strong> tương tự vậy luôn.</p>\n<p>&nbsp;</p>\n<h2>Các lệnh Git cần thiết</h2>\n<p>Xác thực tài khoản Git lần đầu có thể lỗi này:</p>\n<div class=\"rt-callout rt-callout--danger\">\n<p>remote: Invalid username or token. Password authentication is not supported for Git operations.</p>\n</div>\n<p><strong>1. Đặt tên/email hiển thị khi commit (thiết lập danh tính Git — bước cần làm ngay sau khi cài Git)</strong></p>\n<div>\n<div>\n<pre class=\"line-numbers language-none\"><code class=\"language-none\">git config --global user.name \"Tên bạn muốn hiển thị\"\ngit config --global user.email \"email-cua-ban@example.com\"</code></pre>\n</div>\n</div>\n<p>Tên và email này sẽ gắn vào mỗi lần bạn commit code, không liên quan tới việc đăng nhập GitHub/GitLab.</p>\n<p><strong>Ví dụ:</strong></p>\n<pre class=\"line-numbers language-bash\"><code class=\"language-bash\">git config --local user.name \"An Vo\"\ngit config --local user.email \"vothaian97@gmail.com\"</code></pre>\n<p><strong>2. Gắn username GitHub vào lệnh clone (liên quan tới lỗi xác thực ở trên)</strong></p>\n<div>\n<div>\n<pre class=\"line-numbers language-none\"><code class=\"language-none\">git clone https://tên-user-github@github.com/tên-user/tên-repo.git</code></pre>\n</div>\n</div>\n<p><em>Dòng này copy từ Repo trên Git Server.</em></p>\n<p>Lúc này Git sẽ chỉ hỏi bạn ô password/token — bạn dán Personal Access Token vào đó là xong.</p>\n<p>Nếu máy bạn đang lưu sẵn một username cũ (sai) khiến báo lỗi \"Invalid username or token\", cần xoá thông tin đăng nhập cũ đi trước:</p>\n<ul>\n<li><strong>Windows</strong>: mở <strong>Credential Manager</strong> → <strong>Windows Credentials</strong> → tìm mục <code>git:https://github.com</code> → <strong>Remove</strong>.</li>\n<li><strong>macOS</strong>: mở <strong>Keychain Access</strong>, tìm <code>github.com</code>, xoá mục đó đi.</li>\n</ul>\n<p>Sau đó clone lại, Git sẽ hỏi username/token từ đầu.</p>\n<p>&nbsp;</p>\n<div class=\"rt-card rt-card--tip\">\n<p class=\"rt-card__title\">Ghi nhớ</p>\n<p>- Clone: lấy source đầu tiên về máy lần đầu (làm 1 lần)<br>- Commit: thông báo có sự thay đổi cần đẩy lên Git Server (GitHub, GitLab)<br>- Push: bắt đầu đẩy tất cả những Commit lên server<br>- Pull: lấy source mới nhất từ trên Git Server về máy local</p>\n</div>\n<p>&nbsp;</p>\n<h2>✳️ gitignore là gì?</h2>\n<p><strong>gitignore</strong>&nbsp;là file có tên là&nbsp;<strong>.gitignore</strong>&nbsp;do <strong>Git</strong> quy định. Nhiệm vụ của nó là liệt kê những file mà mình&nbsp;<strong>không mong muốn cho vào git</strong> hoặc hiểu nôm na là Git sẽ bỏ qua những file đó đi không mang lên dịch vụ lưu trữ source code. <strong>gitignore </strong>hiện nay rất quan trọng trong team work, các bạn nên áp dụng ngay vào quy trình làm việc của team cụ thể là source code automation test dành cho Tester chúng ta.<br><br></p>\n<h2>✳️ Cách thức hoạt động của gitignore là gì?</h2>\n<p>Có thể hiểu đơn giản là git sẽ bỏ qua file hoặc một tập các file trong project của chúng ta khi commit và push lên repository. Ví dụ:</p>\n<ul>\n<li>Các file mà IDE tự sinh ra trong quá trình build project -&gt; Tránh tốn kém tài nguyên server lưu trữ project.</li>\n<li>Các file cấu hình đường dẫn của máy cá nhân -&gt; Gây ra việc không build được project khi checkout về ở các máy thành viên khác.</li>\n<li>Các file cần phải giữ kín nếu như repository của bạn đang để public.</li>\n<li>…</li>\n</ul>\n<p>Git quản lý các file mà chúng ta muốn “ignore” bằng file&nbsp;<code class=\"prettyprinted\"><span class=\"pun\">.</span><span class=\"pln\">gitignore</span></code>&nbsp;được đặt ở trong thư mục root project.</p>\n<p>Khi add 1 file mới vào git, git sẽ kiểm tra danh sách những file sẽ bỏ qua trong file&nbsp;<strong>.gitignore</strong>&nbsp;và không add chúng vào git. Đó mới chỉ là điều kiện cần,&nbsp;<strong>điều kiện đủ</strong>&nbsp;là files không có trong&nbsp;<strong>git cache</strong>&nbsp;nữa thì git nó mới bỏ qua, chứ files mà nằm trong&nbsp;<strong>git cache</strong>&nbsp;thì&nbsp;<strong>.gitignore</strong>&nbsp;sẽ vô tác dụng.<br><br></p>\n<h2>✳️ Các kiểu format để loại bỏ trong .gitignore hay dùng</h2>\n<ul>\n<li>Sử dụng dấu <strong>#</strong> để comment và có thể để cách dòng cho dễ đọc.</li>\n<li>Format cho các <strong>file có tên cụ thể</strong>: jdk.exe, source.zip, record.mp4,...</li>\n<li>Format dành cho loại bỏ cả <strong>thư mục</strong>: example_folder/<br>Khi ignore thư mục&nbsp;<strong>nên có dấu /</strong>&nbsp;ở sau tên thư mục để nhận biết đó là thư mục, nếu không nó có thể là coi là thư mục hoặc file hay symbolic link.</li>\n<li>Dấu ! phía trước có ý nghĩa phủ định: <strong>!abc/example.exe</strong> nghĩa là không loại bỏ file cụ thể example.exe</li>\n<li>Sử dụng dấu <strong>*</strong> để tìm các file có cùng định dạng. Ví dụ như bạn muốn ignore tất cả các file .xml trong project: *.xml</li>\n<li>Trường hợp khác của <strong>*</strong> nếu bạn chỉ rõ đường dẫn ví dụ: config/*.xml thì nó chỉ có hiệu lực cho các file config/abc.xml mà không có hiệu lực cho các file config/sub/abc.xml.</li>\n<li>Sử dụng dấu <strong>**</strong> để có hiệu lực cho các thư mục không cần định rõ tên. Ví dụ: <strong>**/report</strong> nó sẽ có hiệu lực cho tất cả file hoặc thư mục có tên là report ở mọi nơi trong project.</li>\n<li>Hay sử dụng kiểu <strong>folder/**</strong> để có hiệu lực cho tất cả các file bên trong thư mục.</li>\n</ul>\n<p>&nbsp;</p>\n<h2>✳️ Ví dụ các phần cần loại bỏ trong source code Selenium Java</h2>\n<p><strong>🔆 File .gitignore</strong></p>\n<pre class=\"line-numbers language-git\"><code class=\"language-git\">bin/\nout/\n.idea/\n.allure/\nallure-results/\nExportData/\nExtentReports/\nlogs/\ntarget/\ntest-output/\nreports/\n*.png\n*.jpg\n*.mp4\n*.avi\n*.zip\n*.iml</code></pre>\n<p><code>.gitignore</code>&nbsp;mẫu cho <strong>Playwright TypeScript</strong></p>\n<pre class=\"line-numbers language-log\"><code class=\"language-log\"># ==============================\n# Node.js\n# ==============================\nnode_modules/\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\n\n# ==============================\n# Environment variables / Secrets\n# ==============================\n.env\n.env.*\n!.env.example\n\n# ==============================\n# Playwright\n# ==============================\ntest-results/\nplaywright-report/\nblob-report/\nplaywright/.cache/\n\n# ==============================\n# Screenshots / Videos / Traces\n# ==============================\nscreenshots/\nvideos/\ntraces/\n\n# ==============================\n# Coverage\n# ==============================\ncoverage/\n\n# ==============================\n# Build / Generated files\n# ==============================\ndist/\nbuild/\nout/\n\n# ==============================\n# TypeScript\n# ==============================\n*.tsbuildinfo\n\n# ==============================\n# IDE\n# ==============================\n.vscode/*\n!.vscode/settings.json\n!.vscode/extensions.json\n.idea/\n*.iml\n\n# ==============================\n# OS\n# ==============================\n.DS_Store\nThumbs.db\n\n# ==============================\n# Logs\n# ==============================\n*.log\n\n# ==============================\n# Temporary files\n# ==============================\n*.tmp\n*.temp</code></pre>\n<p><br><span><strong>Lưu ý</strong></span>: khi mà file hoặc folder đã lên trên server trước khi chúng ta add nó vào gitignore thì nó sẽ <strong>KHÔNG BỊ DELETE ĐƯỢC</strong>. Muốn <strong>DELETE ĐƯỢC</strong> chúng ta cần phải delete nó dưới local xong commit push lên lại thì từ đó về sau nó mới hiểu loại bỏ như trong gitignore.</p>\n<h2><br>✳️ Quy trình làm việc với Git chuẩn</h2>\n<p><em><strong>Trước khi mở code làm việc thì chúng ta nên làm theo các bước sau:</strong></em></p>\n<ul>\n<li>B1: <strong>Pull</strong> source về trước - Đảm bảo source dưới local mình đang mới nhất</li>\n<li>B2: <strong>Commit</strong> lên sau khi add/edit code</li>\n<li>B3: <strong>Push</strong></li>\n<li>B4: Lên server check lại</li>\n</ul>\n<p>Và cứ như thế lặp lại từ B1 đến B4 cho các lần mở code làm việc.<br><br>Thao tác theo bước như vậy để <strong>tránh bị</strong> <strong>Conflict</strong> code (trùng lặp nội dung code trên cùng 1 file)</p>",
+    "blocks": [
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ Tìm hiểu tổng quan về Git"
+          }
+        ],
+        "order": 1
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "1. Git là gì?"
+          }
+        ],
+        "order": 2
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "em",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "Định nghĩa ở trên mình lấy ở trang "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://git-scm.com/"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "git-scm.com"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Hiểu nôm na Git là một phần mềm quản lý mã nguồn (source code) phân tán."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png",
+                  "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                  "width": "477",
+                  "height": "268"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png",
+                "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "order": 3
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "2. Ưu điểm của git"
+          }
+        ],
+        "order": 4
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Giúp quản lý mã nguồn đơn giản, an toàn và dễ sử dụng."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Tối ưu hóa việc quản lý source code khi làm việc theo nhóm bằng cách chia và kết hợp ra các nhánh (branch)."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Dễ dàng tích hợp CI/CD trong việc deployment với git."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Có thể dễ dàng lấy source code ở bất kỳ đâu chỉ cần clone từ git server về máy của bạn."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 5
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 6
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "3. Git server là gì?"
+          }
+        ],
+        "order": 7
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Git server là máy chủ (server) có cài đặt dịch vụ git. Source code sẽ được lưu trữ ở máy server này."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Một số git server phổ biến: GitHub, Bitbucket, GitLab, Microsoft Azure DevOps, Amazon AWS CodeCommit ..."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 8
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "Note:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " Các bạn mới cần phân biệt giữa git và git server."
+          }
+        ],
+        "order": 9
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Ví dụ:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " GitHub là một git server. Bạn có thể tạo một respository trên github. Repository trên git server này gọi là remote repository. Bạn có thể Clone "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Remote Repository"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " về máy bạn thành "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Local Repository"
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png",
+                  "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                  "width": "825",
+                  "height": "541"
+                },
+                "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png",
+                "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "order": 10
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "4. Repository là gì?"
+          }
+        ],
+        "order": 11
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png",
+                  "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                  "width": "600",
+                  "height": "439"
+                },
+                "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png",
+                "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "order": 12
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Repostiory được hiểu như là một nơi lưu trữ chứa mã nguồn (source code) và tất cả thông tin liên quan đến việc sửa đổi và lịch sử của toàn bộ project (dự án)."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Dữ liệu của repository git có thể xem ở folder .git:"
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "line_break",
+                    "tag": "br",
+                    "children": []
+                  },
+                  {
+                    "type": "link",
+                    "tag": "a",
+                    "attributes": {
+                      "href": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png"
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "tag": "img",
+                        "attributes": {
+                          "src": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png",
+                          "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                          "width": "1662",
+                          "height": "1069"
+                        },
+                        "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png",
+                        "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Respository có 2 loại:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "list",
+                "tag": "ul",
+                "ordered": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Remote Repository:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " đặt ở git server và có thể chia sẻ tới nhiều người."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Local Repository:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " đặt ở máy local chỉ cho bản thân mình dùng. Bạn có thể Clone Remote Repository về máy bạn thành Local Repository. Và sau khi có thay đổi ở Local Repository có thể push code lên Remote Repository."
+                      },
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      },
+                      {
+                        "type": "line_break",
+                        "tag": "br",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 13
+      },
+      {
+        "type": "heading",
+        "tag": "h3",
+        "level": 3,
+        "children": [
+          {
+            "type": "text",
+            "text": "5. Branch là gì?"
+          }
+        ],
+        "order": 14
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png"
+            },
+            "children": [
+              {
+                "type": "image",
+                "tag": "img",
+                "attributes": {
+                  "src": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png",
+                  "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                  "width": "1636",
+                  "height": "800"
+                },
+                "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png",
+                "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "order": 15
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Branch"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " là nhánh của "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "repository"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", hiểu đơn giản nó như một khu vực làm việc riêng (workspace). Khi tạo ra repository (kho chứa) ở git ta sẽ có 1 branch chính (master/main). Từ branch chính này ta có thể phân chia thành nhiều branch nhỏ. Branch đã phân nhánh này không ảnh hưởng đến branch chính vậy nên ta có thể tiến hành nhiều thay đổi trên cùng 1 repository. Đồng thời ta có thể merge (kết hợp) các branch với nhau."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 16
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Ví dụ:"
+              }
+            ]
+          }
+        ],
+        "order": 17
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Khi ta làm một tính năng (feature) mới ta có thể tạo ra một branch riêng để code cho feature này. Sau khi feature hoàn thành ta có thể merge code vào branch chính (master)."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Hoặc trong team có nhiều team members ta có thể chia repository thành nhiều branch. Với mỗi branch cho một người. Việc chia thành các branch riêng biệt rất tiện lợi cho việc làm việc theo nhóm và tách biệt source code, cùng lúc chỉnh sửa trên 1 repository."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "paragraph",
+                "tag": "p",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Có 2 loại branch. Tương tự như repository, branch cũng có 2 loại:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "list",
+                "tag": "ul",
+                "ordered": false,
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Remote Branch:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " là branch lưu ở git server. Branch này có thể chia sẻ với người khác được."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "list_item",
+                    "tag": "li",
+                    "children": [
+                      {
+                        "type": "element",
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Local branch:"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " là branch lưu ở local máy của mình. Nó có thể liên kết với 1 remote branch hoặc không."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": "\n"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 18
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 19
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ Các bước cài đặt để sử dụng được Git trên Windows"
+          }
+        ],
+        "order": 20
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Bước 1"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": cài đặt phần mềm "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Git SCM"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Bước 2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": cài đặt công cụ quản lý Git là "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Tortoisegit"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " trên "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Windows"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " (hoặc "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "GitHub Desktop"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " cho cả "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "MacOS"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ")"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Bước 3"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": đăng ký tài khoản trên dịch vụ "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "GitHub"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " để lưu trữ source code"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Bước 4"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": tạo repository trên GitHub và kết nối với máy tính Windows"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 21
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Link tải "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Git SCM"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://git-scm.com/download/"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://git-scm.com/download/"
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 22
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Chi tiết cài đặt "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Git SCM"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " các bạn có thể tham khảo: "
+              },
+              {
+                "type": "link",
+                "tag": "a",
+                "attributes": {
+                  "href": "https://phoenixnap.com/kb/how-to-install-git-windows"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "https://phoenixnap.com/kb/how-to-install-git-windows"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 23
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Link tải "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Tortoisegit (chỉ dành cho Window)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://tortoisegit.org/download/"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://tortoisegit.org/download/"
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Link "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "GitHub"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://github.com/"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://github.com/"
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 24
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Tạo mới một remote repository trên GiHub: "
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 25
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://docs.github.com/en/get-started/quickstart/create-a-repo"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://docs.github.com/en/get-started/quickstart/create-a-repo"
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Link tải "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "GitHub Desktop (dành cho cả Window và MacOS)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://desktop.github.com/"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://desktop.github.com/"
+              }
+            ]
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Link "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "GitLab"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": "
+          },
+          {
+            "type": "link",
+            "tag": "a",
+            "attributes": {
+              "href": "https://gitlab.com/users/sign_up"
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "https://gitlab.com/users/sign_up"
+              }
+            ]
+          }
+        ],
+        "order": 26
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "An sẽ chỉ các bạn trên "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "GitHub"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Còn "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "GitLab"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " tương tự vậy luôn."
+          }
+        ],
+        "order": 27
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 28
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Các lệnh Git cần thiết"
+          }
+        ],
+        "order": 29
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Xác thực tài khoản Git lần đầu có thể lỗi này:"
+          }
+        ],
+        "order": 30
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "rt-callout",
+            "rt-callout--danger"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "remote: Invalid username or token. Password authentication is not supported for Git operations."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 31
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "1. Đặt tên/email hiển thị khi commit (thiết lập danh tính Git — bước cần làm ngay sau khi cài Git)"
+              }
+            ]
+          }
+        ],
+        "order": 32
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "code_block",
+                "tag": "pre",
+                "attributes": {
+                  "class": [
+                    "line-numbers",
+                    "language-none"
+                  ]
+                },
+                "code": "git config --global user.name \"Tên bạn muốn hiển thị\"\ngit config --global user.email \"email-cua-ban@example.com\"",
+                "language": "none"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 33
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Tên và email này sẽ gắn vào mỗi lần bạn commit code, không liên quan tới việc đăng nhập GitHub/GitLab."
+          }
+        ],
+        "order": 34
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Ví dụ:"
+              }
+            ]
+          }
+        ],
+        "order": 35
+      },
+      {
+        "type": "code_block",
+        "tag": "pre",
+        "attributes": {
+          "class": [
+            "line-numbers",
+            "language-bash"
+          ]
+        },
+        "code": "git config --local user.name \"An Vo\"\ngit config --local user.email \"vothaian97@gmail.com\"",
+        "language": "bash",
+        "order": 36
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "2. Gắn username GitHub vào lệnh clone (liên quan tới lỗi xác thực ở trên)"
+              }
+            ]
+          }
+        ],
+        "order": 37
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "element",
+            "tag": "div",
+            "children": [
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "code_block",
+                "tag": "pre",
+                "attributes": {
+                  "class": [
+                    "line-numbers",
+                    "language-none"
+                  ]
+                },
+                "code": "git clone https://tên-user-github@github.com/tên-user/tên-repo.git",
+                "language": "none"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 38
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "em",
+            "children": [
+              {
+                "type": "text",
+                "text": "Dòng này copy từ Repo trên Git Server."
+              }
+            ]
+          }
+        ],
+        "order": 39
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Lúc này Git sẽ chỉ hỏi bạn ô password/token — bạn dán Personal Access Token vào đó là xong."
+          }
+        ],
+        "order": 40
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Nếu máy bạn đang lưu sẵn một username cũ (sai) khiến báo lỗi \"Invalid username or token\", cần xoá thông tin đăng nhập cũ đi trước:"
+          }
+        ],
+        "order": 41
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Windows"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": mở "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Credential Manager"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " → "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Windows Credentials"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " → tìm mục "
+              },
+              {
+                "type": "element",
+                "tag": "code",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "git:https://github.com"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " → "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Remove"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "macOS"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": mở "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Keychain Access"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", tìm "
+              },
+              {
+                "type": "element",
+                "tag": "code",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "github.com"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", xoá mục đó đi."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 42
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Sau đó clone lại, Git sẽ hỏi username/token từ đầu."
+          }
+        ],
+        "order": 43
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 44
+      },
+      {
+        "type": "element",
+        "tag": "div",
+        "attributes": {
+          "class": [
+            "rt-card",
+            "rt-card--tip"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "attributes": {
+              "class": [
+                "rt-card__title"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "Ghi nhớ"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "paragraph",
+            "tag": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "- Clone: lấy source đầu tiên về máy lần đầu (làm 1 lần)"
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "- Commit: thông báo có sự thay đổi cần đẩy lên Git Server (GitHub, GitLab)"
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "- Push: bắt đầu đẩy tất cả những Commit lên server"
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "- Pull: lấy source mới nhất từ trên Git Server về máy local"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 45
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 46
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ gitignore là gì?"
+          }
+        ],
+        "order": 47
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "gitignore"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " là file có tên là "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": ".gitignore"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " do "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Git"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " quy định. Nhiệm vụ của nó là liệt kê những file mà mình "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "không mong muốn cho vào git"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " hoặc hiểu nôm na là Git sẽ bỏ qua những file đó đi không mang lên dịch vụ lưu trữ source code. "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "gitignore "
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "hiện nay rất quan trọng trong team work, các bạn nên áp dụng ngay vào quy trình làm việc của team cụ thể là source code automation test dành cho Tester chúng ta."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 48
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ Cách thức hoạt động của gitignore là gì?"
+          }
+        ],
+        "order": 49
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Có thể hiểu đơn giản là git sẽ bỏ qua file hoặc một tập các file trong project của chúng ta khi commit và push lên repository. Ví dụ:"
+          }
+        ],
+        "order": 50
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Các file mà IDE tự sinh ra trong quá trình build project -> Tránh tốn kém tài nguyên server lưu trữ project."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Các file cấu hình đường dẫn của máy cá nhân -> Gây ra việc không build được project khi checkout về ở các máy thành viên khác."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Các file cần phải giữ kín nếu như repository của bạn đang để public."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "…"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 51
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Git quản lý các file mà chúng ta muốn “ignore” bằng file "
+          },
+          {
+            "type": "element",
+            "tag": "code",
+            "attributes": {
+              "class": [
+                "prettyprinted"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "pun"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "pln"
+                  ]
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "gitignore"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " được đặt ở trong thư mục root project."
+          }
+        ],
+        "order": 52
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Khi add 1 file mới vào git, git sẽ kiểm tra danh sách những file sẽ bỏ qua trong file "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": ".gitignore"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " và không add chúng vào git. Đó mới chỉ là điều kiện cần, "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "điều kiện đủ"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " là files không có trong "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "git cache"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " nữa thì git nó mới bỏ qua, chứ files mà nằm trong "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "git cache"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " thì "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": ".gitignore"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " sẽ vô tác dụng."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          }
+        ],
+        "order": 53
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ Các kiểu format để loại bỏ trong .gitignore hay dùng"
+          }
+        ],
+        "order": 54
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Sử dụng dấu "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "#"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " để comment và có thể để cách dòng cho dễ đọc."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Format cho các "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "file có tên cụ thể"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": jdk.exe, source.zip, record.mp4,..."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Format dành cho loại bỏ cả "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "thư mục"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": example_folder/"
+              },
+              {
+                "type": "line_break",
+                "tag": "br",
+                "children": []
+              },
+              {
+                "type": "text",
+                "text": "Khi ignore thư mục "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "nên có dấu /"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ở sau tên thư mục để nhận biết đó là thư mục, nếu không nó có thể là coi là thư mục hoặc file hay symbolic link."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Dấu ! phía trước có ý nghĩa phủ định: "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "!abc/example.exe"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " nghĩa là không loại bỏ file cụ thể example.exe"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Sử dụng dấu "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " để tìm các file có cùng định dạng. Ví dụ như bạn muốn ignore tất cả các file .xml trong project: *.xml"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Trường hợp khác của "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " nếu bạn chỉ rõ đường dẫn ví dụ: config/*.xml thì nó chỉ có hiệu lực cho các file config/abc.xml mà không có hiệu lực cho các file config/sub/abc.xml."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Sử dụng dấu "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "**"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " để có hiệu lực cho các thư mục không cần định rõ tên. Ví dụ: "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "**/report"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " nó sẽ có hiệu lực cho tất cả file hoặc thư mục có tên là report ở mọi nơi trong project."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Hay sử dụng kiểu "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "folder/**"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " để có hiệu lực cho tất cả các file bên trong thư mục."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 55
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": " "
+          }
+        ],
+        "order": 56
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "✳️ Ví dụ các phần cần loại bỏ trong source code Selenium Java"
+          }
+        ],
+        "order": 57
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "🔆 File .gitignore"
+              }
+            ]
+          }
+        ],
+        "order": 58
+      },
+      {
+        "type": "code_block",
+        "tag": "pre",
+        "attributes": {
+          "class": [
+            "line-numbers",
+            "language-git"
+          ]
+        },
+        "code": "bin/\nout/\n.idea/\n.allure/\nallure-results/\nExportData/\nExtentReports/\nlogs/\ntarget/\ntest-output/\nreports/\n*.png\n*.jpg\n*.mp4\n*.avi\n*.zip\n*.iml",
+        "language": "git",
+        "order": 59
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "code",
+            "children": [
+              {
+                "type": "text",
+                "text": ".gitignore"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " mẫu cho "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Playwright TypeScript"
+              }
+            ]
+          }
+        ],
+        "order": 60
+      },
+      {
+        "type": "code_block",
+        "tag": "pre",
+        "attributes": {
+          "class": [
+            "line-numbers",
+            "language-log"
+          ]
+        },
+        "code": "# ==============================\n# Node.js\n# ==============================\nnode_modules/\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\n\n# ==============================\n# Environment variables / Secrets\n# ==============================\n.env\n.env.*\n!.env.example\n\n# ==============================\n# Playwright\n# ==============================\ntest-results/\nplaywright-report/\nblob-report/\nplaywright/.cache/\n\n# ==============================\n# Screenshots / Videos / Traces\n# ==============================\nscreenshots/\nvideos/\ntraces/\n\n# ==============================\n# Coverage\n# ==============================\ncoverage/\n\n# ==============================\n# Build / Generated files\n# ==============================\ndist/\nbuild/\nout/\n\n# ==============================\n# TypeScript\n# ==============================\n*.tsbuildinfo\n\n# ==============================\n# IDE\n# ==============================\n.vscode/*\n!.vscode/settings.json\n!.vscode/extensions.json\n.idea/\n*.iml\n\n# ==============================\n# OS\n# ==============================\n.DS_Store\nThumbs.db\n\n# ==============================\n# Logs\n# ==============================\n*.log\n\n# ==============================\n# Temporary files\n# ==============================\n*.tmp\n*.temp",
+        "language": "log",
+        "order": 61
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "element",
+            "tag": "span",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Lưu ý"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ": khi mà file hoặc folder đã lên trên server trước khi chúng ta add nó vào gitignore thì nó sẽ "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "KHÔNG BỊ DELETE ĐƯỢC"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Muốn "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "DELETE ĐƯỢC"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " chúng ta cần phải delete nó dưới local xong commit push lên lại thì từ đó về sau nó mới hiểu loại bỏ như trong gitignore."
+          }
+        ],
+        "order": 62
+      },
+      {
+        "type": "heading",
+        "tag": "h2",
+        "level": 2,
+        "children": [
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "✳️ Quy trình làm việc với Git chuẩn"
+          }
+        ],
+        "order": 63
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "element",
+            "tag": "em",
+            "children": [
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Trước khi mở code làm việc thì chúng ta nên làm theo các bước sau:"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "order": 64
+      },
+      {
+        "type": "list",
+        "tag": "ul",
+        "ordered": false,
+        "children": [
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "B1: "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Pull"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " source về trước - Đảm bảo source dưới local mình đang mới nhất"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "B2: "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Commit"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " lên sau khi add/edit code"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "B3: "
+              },
+              {
+                "type": "element",
+                "tag": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Push"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          },
+          {
+            "type": "list_item",
+            "tag": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "B4: Lên server check lại"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "\n"
+          }
+        ],
+        "order": 65
+      },
+      {
+        "type": "paragraph",
+        "tag": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Và cứ như thế lặp lại từ B1 đến B4 cho các lần mở code làm việc."
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "line_break",
+            "tag": "br",
+            "children": []
+          },
+          {
+            "type": "text",
+            "text": "Thao tác theo bước như vậy để "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "tránh bị"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "type": "element",
+            "tag": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "Conflict"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " code (trùng lặp nội dung code trên cùng 1 file)"
+          }
+        ],
+        "order": 66
+      }
+    ]
+  },
+  "json_path": "chapters/chapter-01/lesson-003.json",
+  "markdown_path": "chapters/chapter-01/lesson-003.md",
+  "exported_at": "2026-11-19T09:36:07.873053+07:00",
+  "short_description_html": "<p>✅ Cài đặt Git vào máy tính<br>✅ Làm việc với GitHub/GitLab để Clone repo Claude Testing Skills và Codex Testing Skills về máy</p>",
+  "images": [
+    {
+      "order": 1,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png",
+      "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png",
+        "category": "image",
+        "path": "assets/aa0b66bfdc4c5f4ac3de.png",
+        "status": "downloaded",
+        "bytes": 29573,
+        "sha256": "9a4e35f55825c438734219af0cada468f9468db7562dc87803391b38999b2836",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 2,
+      "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png",
+      "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+      "title": "",
+      "asset": {
+        "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png",
+        "category": "image",
+        "path": "assets/cd7ed340e4d4735f0bc8.png",
+        "status": "downloaded",
+        "bytes": 115919,
+        "sha256": "df7109e79f5d644614faef4ce2f76ea914d08c0f0418d6534195746fb8281e8b",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 3,
+      "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png",
+      "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+      "title": "",
+      "asset": {
+        "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png",
+        "category": "image",
+        "path": "assets/6b207b59ebd8a46c6253.png",
+        "status": "downloaded",
+        "bytes": 48939,
+        "sha256": "aa27175e034f3c045b200c531f580ef673ffd015f2f6564873db5e333b9f1775",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 4,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png",
+      "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png",
+        "category": "image",
+        "path": "assets/98bb34a24d84338a22ac.png",
+        "status": "downloaded",
+        "bytes": 100229,
+        "sha256": "9225f07a301403055f14c185756d0290ebab182f09815df78f04516fa6c52a9f",
+        "content_type": "image/png"
+      }
+    },
+    {
+      "order": 5,
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png",
+      "alt": "[Selenium Java] Quản lý source code Selenium Java trên GitHub | Anh Tester",
+      "title": "",
+      "asset": {
+        "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png",
+        "category": "image",
+        "path": "assets/2b047bf3b5d8d1cb546e.png",
+        "status": "downloaded",
+        "bytes": 53445,
+        "sha256": "e2e0c7c6c0de86921706c51854671d3eaddd2ed8abd13edfbd144abd7d14ea79",
+        "content_type": "image/png"
+      }
+    }
+  ],
+  "media": [],
+  "links": [
+    {
+      "order": 1,
+      "text": "git-scm.com",
+      "url": "https://git-scm.com/",
+      "download": false
+    },
+    {
+      "order": 2,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png",
+      "download": false
+    },
+    {
+      "order": 3,
+      "text": "",
+      "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png",
+      "download": false
+    },
+    {
+      "order": 4,
+      "text": "",
+      "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png",
+      "download": false
+    },
+    {
+      "order": 5,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png",
+      "download": false
+    },
+    {
+      "order": 6,
+      "text": "",
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png",
+      "download": false
+    },
+    {
+      "order": 7,
+      "text": "https://git-scm.com/download/",
+      "url": "https://git-scm.com/download/",
+      "download": false
+    },
+    {
+      "order": 8,
+      "text": "https://phoenixnap.com/kb/how-to-install-git-windows",
+      "url": "https://phoenixnap.com/kb/how-to-install-git-windows",
+      "download": false
+    },
+    {
+      "order": 9,
+      "text": "https://tortoisegit.org/download/",
+      "url": "https://tortoisegit.org/download/",
+      "download": false
+    },
+    {
+      "order": 10,
+      "text": "https://github.com/",
+      "url": "https://github.com/",
+      "download": false
+    },
+    {
+      "order": 11,
+      "text": "https://docs.github.com/en/get-started/quickstart/create-a-repo",
+      "url": "https://docs.github.com/en/get-started/quickstart/create-a-repo",
+      "download": false
+    },
+    {
+      "order": 12,
+      "text": "https://desktop.github.com/",
+      "url": "https://desktop.github.com/",
+      "download": false
+    },
+    {
+      "order": 13,
+      "text": "https://gitlab.com/users/sign_up",
+      "url": "https://gitlab.com/users/sign_up",
+      "download": false
+    }
+  ],
+  "assignment_link": null,
+  "assets": [
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/git-blog-header.png",
+      "category": "image",
+      "path": "assets/aa0b66bfdc4c5f4ac3de.png",
+      "status": "downloaded",
+      "bytes": 29573,
+      "sha256": "9a4e35f55825c438734219af0cada468f9468db7562dc87803391b38999b2836",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece050dc5.png",
+      "category": "image",
+      "path": "assets/cd7ed340e4d4735f0bc8.png",
+      "status": "downloaded",
+      "bytes": 115919,
+      "sha256": "df7109e79f5d644614faef4ce2f76ea914d08c0f0418d6534195746fb8281e8b",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/4383/62f2ece81f866.png",
+      "category": "image",
+      "path": "assets/6b207b59ebd8a46c6253.png",
+      "status": "downloaded",
+      "bytes": 48939,
+      "sha256": "aa27175e034f3c045b200c531f580ef673ffd015f2f6564873db5e333b9f1775",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/repository_git.png",
+      "category": "image",
+      "path": "assets/98bb34a24d84338a22ac.png",
+      "status": "downloaded",
+      "bytes": 100229,
+      "sha256": "9225f07a301403055f14c185756d0290ebab182f09815df78f04516fa6c52a9f",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://anhtester.com/storage/photos/shares/lesson/selenium_java/feature-branch-with-develop-git-workflow.png",
+      "category": "image",
+      "path": "assets/2b047bf3b5d8d1cb546e.png",
+      "status": "downloaded",
+      "bytes": 53445,
+      "sha256": "e2e0c7c6c0de86921706c51854671d3eaddd2ed8abd13edfbd144abd7d14ea79",
+      "content_type": "image/png"
+    }
+  ],
+  "quality": {
+    "checked_at": "2026-11-19T09:36:07.872936+07:00",
+    "passed": true,
+    "checks": {
+      "code_exact_html": true,
+      "code_exact_json": true,
+      "code_markdown_whitespace": true,
+      "headings_exact": true,
+      "table_count_matches": true,
+      "image_count_matches": true,
+      "paragraph_count_matches": true,
+      "list_count_matches": true,
+      "blockquote_count_matches": true,
+      "all_cleaned_text_preserved": true,
+      "content_nonempty": true,
+      "no_form_or_script": true
+    },
+    "heading_count": 13,
+    "code_block_count": 5,
+    "table_count": 0,
+    "image_count": 5,
+    "code_sha256": [
+      "e649a5b8373df47aa71becbb4055916e42f88081c5cd198533fc5de3440de12d",
+      "f466b0171572379a9bfbbf4dd558bcedc4d8bc0780b174e299c9b76f5e8b6e77",
+      "a84f0b2493976cc2141fe10ef3e4e59d2f0b53af331d113c74e0997f3fbd2702",
+      "4c71abf9f0e856da6c34c8665f8e6309a0ea42ea4b7bdfd3fb6b6bbfa091b638",
+      "ecc739bba7d1d7e781f2560edef4f119c8a9b834d2298bff0f2825ce763d9046"
+    ],
+    "content_text_sha256": "749c998c40afcf856beaf8b74d6b39464a4b2b7d53a92791ac0432aa586dc23e",
+    "note": "JSON/HTML preserve code exactly. Markdown adds the required final line ending before a closing fence when absent in the source."
+  },
+  "assignment": null,
+  "redacted_url_parameter_count": 0
+}

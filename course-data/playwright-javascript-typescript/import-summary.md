@@ -1,4 +1,4 @@
-# Báo cáo nhập dữ liệu AnhTester
+# Báo cáo nhập dữ liệu Playwright JavaScript TypeScript
 
 Kiểm tra: 2026-11-19T09:22:47.300005+07:00
 
@@ -8,7 +8,7 @@ Kiểm tra: 2026-11-19T09:22:47.300005+07:00
 - SHA-256 ZIP: `82d7fd6f1a82cf1ed0085f4d907809fa7f9345d6ee389683543799c7c0f31016`.
 - Repository: https://github.com/hoanghiep897/Automation-Testing-Academy.
 - Nhánh chuẩn bị: `main`. Repository trống khi clone; chưa có commit trên remote.
-- Đích giải nén: `course-data/anhtester/`. Đã bỏ một lớp thư mục bao ngoài `anhtester-course-export/`.
+- Đích giải nén: `course-data/playwright-javascript-typescript/`. Đã bỏ một lớp thư mục bao ngoài `anhtester-course-export/`.
 - Quyền phân phối: chủ sở hữu đã xác nhận quyền đăng lại công khai các tài liệu trong ZIP và cho phép commit/push lên `main` của repo Public.
 
 ## Thống kê đã đối chiếu với file thực tế
@@ -63,17 +63,21 @@ Dung lượng trên là tổng kích thước 217 file trong ZIP sau giải nén
 
 | Đường dẫn | Nội dung |
 |---|---|
-| `course-data/anhtester/manifest.json` | Danh mục 7 chương, 42 mục và trạng thái nội dung |
-| `course-data/anhtester/chapters/chapter-XX/lesson-NNN.json` | Dữ liệu có cấu trúc của từng mục |
-| `course-data/anhtester/chapters/chapter-XX/lesson-NNN.md` | Nội dung đọc được bằng Markdown |
-| `course-data/anhtester/assets/` | 126 file ảnh và README của assets |
-| `course-data/anhtester/progress.json` | Tiến độ theo URL |
-| `course-data/anhtester/export-report.md` | Báo cáo xuất và đối chiếu DOM gốc |
-| `course-data/anhtester/scripts/` | Script xuất gốc, không chứa credential |
-| `course-data/anhtester/import-summary.md` | Báo cáo nhập hiện tại |
+| `course-data/playwright-javascript-typescript/manifest.json` | Danh mục 7 chương, 42 mục và trạng thái nội dung |
+| `course-data/playwright-javascript-typescript/chapters/chapter-XX/lesson-NNN.json` | Dữ liệu có cấu trúc của từng mục |
+| `course-data/playwright-javascript-typescript/chapters/chapter-XX/lesson-NNN.md` | Nội dung đọc được bằng Markdown |
+| `course-data/playwright-javascript-typescript/assets/` | 126 file ảnh và README của assets |
+| `course-data/playwright-javascript-typescript/progress.json` | Tiến độ theo URL |
+| `course-data/playwright-javascript-typescript/export-report.md` | Báo cáo xuất và đối chiếu DOM gốc |
+| `course-data/playwright-javascript-typescript/scripts/` | Script xuất gốc, không chứa credential |
+| `course-data/playwright-javascript-typescript/import-summary.md` | Báo cáo nhập hiện tại |
 
 ## Trạng thái phát hành
 
 Chủ sở hữu đã duyệt bản chuẩn bị dữ liệu và xác nhận quyền đăng lại công khai, cho phép commit/push lên nhánh `main`. Bản nhập chỉ bổ sung dữ liệu và tài liệu quản trị repository.
 
 Commit message: `Add structured course data for future academy integration`.
+
+## Tổ chức thư mục theo khóa học
+
+Đã đổi thư mục dữ liệu từ tên nhà cung cấp sang `course-data/playwright-javascript-typescript/` theo yêu cầu chủ sở hữu. Các file bài giảng, code, JSON, Markdown, ảnh và báo cáo xuất nguồn giữ nguyên; các đường dẫn trong báo cáo nhập đã được cập nhật.

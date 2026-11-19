@@ -1,0 +1,132 @@
+{
+  "scope": "full_course_content",
+  "updated_at": "2026-11-19T09:39:10.181999+07:00",
+  "catalog_exported": 17,
+  "catalog_failed": 0,
+  "full_content_exported": 17,
+  "full_content_failed": 0,
+  "metadata_only": 0,
+  "lessons": {
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/328": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-001.json",
+      "markdown_path": "chapters/chapter-01/lesson-001.md",
+      "updated_at": "2026-11-19T09:34:55.550172+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/329": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-002.json",
+      "markdown_path": "chapters/chapter-01/lesson-002.md",
+      "updated_at": "2026-11-19T09:35:23.421255+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/358": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-003.json",
+      "markdown_path": "chapters/chapter-01/lesson-003.md",
+      "updated_at": "2026-11-19T09:36:07.875177+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/330": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-004.json",
+      "markdown_path": "chapters/chapter-01/lesson-004.md",
+      "updated_at": "2026-11-19T09:36:19.043039+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/331": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-005.json",
+      "markdown_path": "chapters/chapter-01/lesson-005.md",
+      "updated_at": "2026-11-19T09:36:29.155693+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/332": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-006.json",
+      "markdown_path": "chapters/chapter-01/lesson-006.md",
+      "updated_at": "2026-11-19T09:36:40.377160+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/333": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-007.json",
+      "markdown_path": "chapters/chapter-01/lesson-007.md",
+      "updated_at": "2026-11-19T09:36:50.981955+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/364": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-008.json",
+      "markdown_path": "chapters/chapter-01/lesson-008.md",
+      "updated_at": "2026-11-19T09:37:01.252702+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/334": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-009.json",
+      "markdown_path": "chapters/chapter-01/lesson-009.md",
+      "updated_at": "2026-11-19T09:37:11.570077+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/335": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-010.json",
+      "markdown_path": "chapters/chapter-01/lesson-010.md",
+      "updated_at": "2026-11-19T09:37:22.699176+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/363": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-011.json",
+      "markdown_path": "chapters/chapter-01/lesson-011.md",
+      "updated_at": "2026-11-19T09:37:32.893272+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/360": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-012.json",
+      "markdown_path": "chapters/chapter-01/lesson-012.md",
+      "updated_at": "2026-11-19T09:37:42.992598+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/336": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-013.json",
+      "markdown_path": "chapters/chapter-01/lesson-013.md",
+      "updated_at": "2026-11-19T09:37:53.275209+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/366": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-014.json",
+      "markdown_path": "chapters/chapter-01/lesson-014.md",
+      "updated_at": "2026-11-19T09:38:03.564787+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/337": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-015.json",
+      "markdown_path": "chapters/chapter-01/lesson-015.md",
+      "updated_at": "2026-11-19T09:38:13.740040+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/338": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-016.json",
+      "markdown_path": "chapters/chapter-01/lesson-016.md",
+      "updated_at": "2026-11-19T09:39:08.134283+07:00"
+    },
+    "https://anhtester.com/learn/khoa-hoc-su-dung-ai-trong-test-manual/339": {
+      "status": "content_exported",
+      "content_status": "exported",
+      "json_path": "chapters/chapter-01/lesson-017.json",
+      "markdown_path": "chapters/chapter-01/lesson-017.md",
+      "updated_at": "2026-11-19T09:38:35.372831+07:00"
+    }
+  },
+  "sample_limit": 17,
+  "full_content_skipped": 0
+}

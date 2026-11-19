@@ -1,27 +1,20 @@
 # Automation Testing Academy
 
-Dữ liệu khóa học được chuẩn bị cho việc tích hợp vào Automation Testing Academy sau này.
+Các bộ dữ liệu khóa học được chuẩn bị cho việc tích hợp vào Automation Testing Academy sau này. Mỗi khóa có một thư mục riêng đặt theo tên khóa học.
 
-## Dữ liệu AnhTester
+## Danh mục dữ liệu
 
-Thư mục: [`course-data/anhtester/`](course-data/anhtester/).
+| Khóa học | Thư mục | Chương | Tổng mục | Có nội dung | Chỉ metadata | Ảnh |
+|---|---|---:|---:|---:|---:|---:|
+| Website and API Testing Automation with Playwright JavaScript TypeScript | [playwright-javascript-typescript](course-data/playwright-javascript-typescript/) | 7 | 42 | 34 | 8 | 126 |
+| Sử dụng AI trong Test Manual | [su-dung-ai-trong-test-manual](course-data/su-dung-ai-trong-test-manual/) | 1 | 17 | 17 | 0 | 28 |
 
-| Chỉ số | Số lượng |
-|---|---:|
-| Chương | 7 |
-| Mục trong danh mục | 42 |
-| Mục có `content_status: exported` | 34 |
-| Mục chỉ có metadata | 8 |
-| Mục lỗi kỹ thuật chưa xử lý | 0 |
-| Bài tập riêng có nội dung | 33 |
-| Ảnh đã kiểm tra | 126 |
+Chỉ các mục có `content_status: exported` và nội dung HTML/blocks thật được tính là có nội dung. Khóa Playwright còn 8 mục chỉ có metadata: mục 35–42, tương ứng Bài 34–41 (source ID 391–398), chưa hiển thị nội dung bài giảng trên trang nguồn lúc kiểm tra.
 
-Mục 35–42, tương ứng Bài 34–41 (source ID 391–398), chỉ hiển thị tiêu đề và mô tả ngắn trên trang nguồn lúc xuất. Các mục này có trạng thái `metadata_only` và không được tính là đã xuất nội dung thành công.
-
-## Cấu trúc
+## Cấu trúc mỗi khóa
 
 ```text
-course-data/anhtester/
+course-data/<ten-khoa-hoc>/
 ├── manifest.json
 ├── chapters/
 │   ├── chapter-01/
@@ -33,10 +26,15 @@ course-data/anhtester/
 └── import-summary.md
 ```
 
-Mỗi bài có JSON và Markdown. JSON của các mục đã xuất có HTML và cấu trúc khối nội dung; hình ảnh nằm trong `assets/`. Bản Markdown giữ thứ tự nội dung, bảng HTML và code block. Các file dữ liệu nguyên gốc từ ZIP được giữ nguyên từng byte; metadata hệ điều hành `.DS_Store` được loại khỏi commit.
+Mỗi bài có JSON và Markdown. JSON của các mục đã xuất có HTML và cấu trúc khối nội dung; ảnh nằm trong `assets/`. Markdown giữ thứ tự nội dung, bảng HTML và code block. Đường dẫn tương đối của bài và ảnh được giữ nguyên khi đổi tên thư mục khóa học.
 
-Xem [báo cáo nhập dữ liệu](course-data/anhtester/import-summary.md) và [báo cáo xuất từ nguồn](course-data/anhtester/export-report.md).
+Các file bài giảng, code và assets nguyên gốc được giữ nguyên từng byte. Metadata hệ điều hành, browser profile, thông tin đăng nhập và log cục bộ được loại khỏi commit.
+
+## Báo cáo
+
+- Playwright JavaScript TypeScript: [báo cáo nhập](course-data/playwright-javascript-typescript/import-summary.md), [báo cáo xuất](course-data/playwright-javascript-typescript/export-report.md).
+- Sử dụng AI trong Test Manual: [báo cáo nhập](course-data/su-dung-ai-trong-test-manual/import-summary.md), [báo cáo xuất](course-data/su-dung-ai-trong-test-manual/export-report.md).
 
 ## Quyền phân phối
 
-Chủ sở hữu đã xác nhận quyền đăng lại công khai các tài liệu trong ZIP và cho phép commit/push dữ liệu lên nhánh `main` của repository Public này.
+Chủ sở hữu đã xác nhận quyền đăng lại công khai và cho phép đưa dữ liệu các khóa học lên nhánh `main` của repository Public này. URL nguồn và thông tin nguồn trong dữ liệu được giữ nguyên.
